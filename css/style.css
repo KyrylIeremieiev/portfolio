@@ -19,6 +19,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+section {
+  box-shadow: 0rem 0.5rem 1rem #303841;
+}
+
 .header {
   height: 100vh;
   width: 15vw;
@@ -49,7 +53,6 @@ body {
   position: relative;
   padding-left: 5rem;
   padding-top: 10rem;
-  box-shadow: 0rem 0.5rem 1rem #303841;
 }
 .welcome__img {
   position: absolute;
@@ -141,6 +144,76 @@ body {
 }
 .projects__name:hover {
   cursor: pointer;
+}
+
+.about {
+  width: 85vw;
+  padding: 5rem;
+  color: #D3E0EA;
+}
+.about__profile {
+  background: #303841;
+  border-radius: 1rem;
+  height: 30rem;
+  border: 0.2rem solid #A287F4;
+  padding: 2rem;
+}
+.about__title {
+  display: flex;
+  justify-self: center;
+}
+.about__wrapper {
+  display: flex;
+  gap: 2rem;
+}
+.about__img {
+  border-radius: 1rem;
+}
+.about__text {
+  font-size: 1rem;
+}
+
+.contact {
+  width: 85vw;
+  padding: 5rem;
+  color: #D3E0EA;
+}
+.contact__forms {
+  background: #303841;
+  border-radius: 1rem;
+  border: 0.2rem solid #A287F4;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact__form {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__bigTitle {
+  display: flex;
+  justify-content: center;
+}
+.contact__title {
+  font-size: 2rem;
+}
+.contact__input {
+  width: 80%;
+  resize: none;
+  padding: 0.5rem;
+}
+.contact__post {
+  background: linear-gradient(to right, #A287F4, #7A57D1);
+  color: #D3E0EA;
+  transition: 0.5s all;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+}
+.contact__post:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #7A57D1, #A287F4);
 }
 
 /*# sourceMappingURL=style.css.map */
