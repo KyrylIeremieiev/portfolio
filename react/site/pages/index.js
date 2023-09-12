@@ -17,31 +17,77 @@ export default function Home(){
     }
     return(
         <section>
-            <input
-                type="text"
-                required
-                value={user}
-                onChange={(e)=>setUser(e.target.value)}
-            />
-            <input
-                type="text"
-                required
-                value={pass}
-                onChange={(e)=>setPass(e.target.value)}
-            />
-            <h2>{ user }</h2>
-            <h2>{ pass }</h2>
-            <button
-                value="submit"
-                onClick={submit}
-            />
+            <button 
+                className="header__button"
+                id="header__button"
+            >
+                button
+            </button>
+
+            <header className="header">
+                <ul className="header__nav">
+                    <li className="header__navItem">Projects</li>
+                    <li className="header__navItem">Skills</li>
+                    <li className="header__navItem">About me</li>
+                    <li className="header__navItem">CV</li>
+                    <li className="header__navItem">Contact</li>
+                </ul>
+            </header>
+
+            <main>
+            <section className="welcome contentPart">
+                <article className="welcome__wrapper">
+                    <h1 className="welcome__title">Welcome to my Portfolio</h1>
+                    <p className="welcome__text">My name is Kyryl Ieremieiev, I am an aspiring fullstack webdeveloper!</p>
+                    <button className="welcome__button">CV</button>
+                </article>
+            </section>
+            
+            <section className="projects contentPart">
+                <h2 className="projects__title">Projects</h2>
+                <ul className="projects__list">
+                    <li className="projects__item">
+                        <figcaption className="projects__name">Test Project 1</figcaption>
+                    </li>
+                    <li class="projects__item">
+                        <figcaption className="projects__name">Test Project 1</figcaption>
+                    </li>
+                    <li class="projects__item">
+                        <figcaption className="projects__name">Test Project 1</figcaption>
+                    </li>
+                    <li class="projects__item">
+                        <figcaption className="projects__name">Test Project 1</figcaption>
+                    </li>
+                    <li class="projects__item">
+                        <figcaption className="projects__name">Test Project 1</figcaption>
+                    </li>
+                    <li class="projects__item">
+                        <figcaption className="projects__name">Test Project 1</figcaption>
+                    </li>
+                    <li class="projects__item">
+                        <figcaption className="projects__name">Test Project 1</figcaption>
+                    </li>
+                    <li class="projects__item">
+                        <figcaption className="projects__name">Test Project 1</figcaption>
+                    </li>
+                </ul>
+            </section>
+    
+            <section className="about contentPart">
+                <article className="about__profile">
+                    <h2 className="about__title">About Me</h2>
+                    <section className="about__wrapper">
+                        <p className="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi cum hic quas voluptatem dicta, porro aliquid incidunt obcaecati rem expedita quam sint illum non laborum veritatis ducimus voluptatum sed dolore.
+                        Consequatur ipsa, quis accusamus est earum aliquam, vel laboriosam eos aut, esse quasi accusantium eius pariatur fugiat. Sint deserunt fugiat quisquam soluta, nisi mollitia omnis dolore sit quibusdam dicta vel!</p>
+                    </section>
+                </article>
+            </section>
+    
+            <section className="contact contentPart">
+            </section>
+            </main>    
         </section>
+
+        
         );
 }
-
-/* const domNode = document.getElementById('root');
-const root = createRoot(domNode);
-root.render(<App />); */
-/*     roller = document.getElementById("hi");
-    roller.innerhtml = "red";
- */

@@ -19,9 +19,15 @@
     font-family: "Poppins", sans-serif;
     flex-grow: 2;
   }
+
+  .contentPart{
+    width: 85vw;
+
+  }
   
   section {
     box-shadow: 0rem 0.5rem 1rem #303841;
+    display: flex;
   }
   
   .header {
