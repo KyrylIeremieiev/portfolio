@@ -1,3 +1,227 @@
-.hi{
-    color: red;
-}
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5;
+  }
+  
+  body {
+    font-size: 2rem;
+  }
+  
+  body {
+    min-height: 200vh;
+    background: #3A4750;
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    flex-grow: 2;
+  }
+  
+  section {
+    box-shadow: 0rem 0.5rem 1rem #303841;
+  }
+  
+  .header {
+    height: 100vh;
+    width: 15vw;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background: #303841;
+    color: #D3E0EA;
+    transition: 0.4s all;
+    padding-top: 10rem;
+  }
+  
+  .header__nav{
+    width: 100%;
+  }
+  
+  .header__navItem {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border: 1px solid #3A4750;
+    list-style: none;
+  }
+  .header__navItem:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #A287F4, #7A57D1);
+  }
+  
+  .welcome {
+    min-width: 85vw;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 5rem;
+    padding-top: 10rem;
+  }
+  .welcome__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+  }
+  .welcome__title {
+    background: linear-gradient(#A287F4, #7A57D1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100%;
+  }
+  .welcome__text {
+    color: #D3E0EA;
+    font-size: 75%;
+  }
+  .welcome__button {
+    border: none;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    background: linear-gradient(to right, #A287F4, #7A57D1);
+    color: #D3E0EA;
+    transition: 0.5s all;
+  }
+  .welcome__button:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #7A57D1, #A287F4);
+  }
+  
+  .projects {
+    width: 85vw;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .projects__title {
+    color: #D3E0EA;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-3%);
+  }
+  .projects__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .projects__item {
+    width: 15rem;
+    aspect-ratio: 1/1;
+    background: #303841;
+    list-style: none;
+    border: 0.2rem solid #A287F4;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 1rem;
+    position: relative;
+  }
+  .projects__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 0.5rem;
+    top: 0;
+    left: 0;
+  }
+  .projects__name {
+    background: linear-gradient(#A287F4, #7A57D1);
+    border: 0.1rem solid #303841;
+    border-radius: 0.2rem;
+    width: 70%;
+    font-size: 60%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D3E0EA;
+    z-index: 2;
+  }
+  .projects__name:hover {
+    cursor: pointer;
+  }
+  
+  .about {
+    width: 85vw;
+    padding: 5rem;
+    color: #D3E0EA;
+  }
+  .about__profile {
+    background: #303841;
+    border-radius: 1rem;
+    height: 30rem;
+    border: 0.2rem solid #A287F4;
+    padding: 2rem;
+  }
+  .about__title {
+    display: flex;
+    justify-self: center;
+  }
+  .about__wrapper {
+    display: flex;
+    gap: 2rem;
+  }
+  .about__img {
+    border-radius: 1rem;
+  }
+  .about__text {
+    font-size: 1rem;
+  }
+  
+  .contact {
+    width: 85vw;
+    padding: 5rem;
+    color: #D3E0EA;
+  }
+  .contact__forms {
+    background: #303841;
+    border-radius: 1rem;
+    border: 0.2rem solid #A287F4;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact__form {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact__bigTitle {
+    display: flex;
+    justify-content: center;
+  }
+  .contact__title {
+    font-size: 2rem;
+  }
+  .contact__input {
+    width: 80%;
+    resize: none;
+    padding: 0.5rem;
+  }
+  .contact__post {
+    background: linear-gradient(to right, #A287F4, #7A57D1);
+    color: #D3E0EA;
+    transition: 0.5s all;
+    width: 10rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+  }
+  .contact__post:hover {
+    cursor: pointer;
+    background: linear-gradient(to right, #7A57D1, #A287F4);
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  

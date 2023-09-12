@@ -1,6 +1,5 @@
 import React, {useEffect} from "react";
 import { useState } from "react";
-import { createRoot } from 'react-dom/client';
 
 export default function Home(){
     const [user, setUser] = useState('');
