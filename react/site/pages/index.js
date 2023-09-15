@@ -5,6 +5,7 @@ import SpinningPlanet from './components/planet';
 import MyNavigation from './components/MyNavigation'
 import Welcome from "./components/welcome";
 import Project from "./components/project";
+import AboutMe from "./components/aboutMe";
 
 
 export default function Home(){
@@ -27,6 +28,7 @@ export default function Home(){
             <main>
                 <Welcome></Welcome>
                 <Project></Project>
+                <AboutMe></AboutMe>
             </main>    
         </section>
 
