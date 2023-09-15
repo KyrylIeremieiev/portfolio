@@ -4,6 +4,14 @@
     box-sizing: border-box;
   }
   
+  .site{
+    position: relative;
+  }
+  .backgroundcanvas{
+    position: absolute;
+    width:0px;
+  }
+
   html {
     font-size: 62.5;
   }
@@ -56,6 +64,10 @@
   .header__navItem:hover {
     cursor: pointer;
     background: linear-gradient(to right, #A287F4, #7A57D1);
+  }
+  .canvasWrapper{
+    width: 100vw;
+    height: 100vh;
   }
   
   .welcome {

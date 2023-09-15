@@ -1,5 +1,34 @@
 import React, {useEffect} from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { Canvas, useFrame } from '@react-three/fiber'
+import * as THREE from 'three';
+import Link from 'next/link';
+import SpinningPlanet from './planet';
+
+
+function Box(props){
+//This reference will give us direct access to the mesh
+  const meshRef = useRef()
+  // Set up state for the hovered and active state
+  const [hovered, setHover] = useState(false)
+  const [active, setActive] = useState(false)
+  // Subscribe this component to the render-loop, rotate the mesh every frame
+  useFrame((state, delta) => (meshRef.current.rotation.x += delta))
+  // Return view, these are regular three.js elements expressed in JSX
+  return (
+    <mesh
+      {...props}
+      ref={meshRef}
+      scale={active ? 1.5 : 1}
+      onClick={(event) => setActive(!active)}
+      onPointerOver={(event) => setHover(true)}
+      onPointerOut={(event) => setHover(false)}>
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+    </mesh>
+  )
+}
+
 
 export default function Home(){
     const [user, setUser] = useState('');
@@ -16,10 +45,13 @@ export default function Home(){
         });
     }
     return(
-        <section>
+        <section className="site">
             <button 
                 className="header__button"
                 id="header__button"
+                onClick={()=>{
+
+                }}
             >
                 button
             </button>
@@ -35,15 +67,22 @@ export default function Home(){
             </header>
 
             <main>
-            <section className="welcome contentPart">
+            <section className="welcome contentPart lunar">
                 <article className="welcome__wrapper">
                     <h1 className="welcome__title">Welcome to my Portfolio</h1>
-                    <p className="welcome__text">My name is Kyryl Ieremieiev, I am an aspiring fullstack webdeveloper!</p>
+                    <p className="welcome__text">My name is Kyryl Ieremieiev, {'\n'}I am an aspiring fullstack webdeveloper!</p>
                     <button className="welcome__button">CV</button>
                 </article>
+                <div
+                className="canvasWrapper"
+                >
+                <div className="App">
+                    <SpinningPlanet/>
+                </div>
+                </div>
             </section>
             
-            <section className="projects contentPart">
+            <section className="projects contentPart solar">
                 <h2 className="projects__title">Projects</h2>
                 <ul className="projects__list">
                     <li className="projects__item">
@@ -73,7 +112,7 @@ export default function Home(){
                 </ul>
             </section>
     
-            <section className="about contentPart">
+            <section className="about contentPart lunar">
                 <article className="about__profile">
                     <h2 className="about__title">About Me</h2>
                     <section className="about__wrapper">
