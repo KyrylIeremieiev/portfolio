@@ -1,9 +1,8 @@
 import React, {useEffect} from "react";
 import { useState, useRef } from "react";
 import Link from 'next/link';
-import SpinningPlanet from './planet';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import SpinningPlanet from './components/planet';
+import MyNavigation from './components/MyNavigation'
 
 
 export default function Home(){
@@ -22,24 +21,8 @@ export default function Home(){
     }
     return(
         <section className="site">
-            <header className="header">
-            <button 
-                className="header__button"
-                id="header__button"
-                onClick={()=>{
-
-                }}
-            >
-                button
-            </button>
-                <ul className="header__nav">
-                    <li className="header__navItem">Projects</li>
-                    <li className="header__navItem">Skills</li>
-                    <li className="header__navItem">About me</li>
-                    <li className="header__navItem">CV</li>
-                    <li className="header__navItem">Contact</li>
-                </ul>
-            </header>
+            <MyNavigation>
+            </MyNavigation>
 
             <main>
             <section className="welcome contentPart">
