@@ -40,6 +40,7 @@ containerRef.current.appendChild(renderer.domElement);
     });
 
     const planet = new THREE.Mesh(planetGeometry, planetMaterial);
+    planet.scale.set(1.5, 1.5, 1.5);
     scene.add(planet);
 
     const createRandomDots = () => {

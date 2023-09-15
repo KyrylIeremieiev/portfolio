@@ -1,8 +1,10 @@
 import React, {useEffect} from "react";
 import { useState, useRef } from "react";
-import { Canvas, useFrame } from '@react-three/fiber'
 import Link from 'next/link';
 import SpinningPlanet from './planet';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 
 export default function Home(){
     const [user, setUser] = useState('');
@@ -20,6 +22,7 @@ export default function Home(){
     }
     return(
         <section className="site">
+            <header className="header">
             <button 
                 className="header__button"
                 id="header__button"
@@ -29,8 +32,6 @@ export default function Home(){
             >
                 button
             </button>
-
-            <header className="header">
                 <ul className="header__nav">
                     <li className="header__navItem">Projects</li>
                     <li className="header__navItem">Skills</li>
@@ -48,7 +49,7 @@ export default function Home(){
                     <p className="welcome__text">I am an aspiring fullstack webdeveloper!</p>
                     <button className="welcome__button">CV</button>
                 </article>
-                <div className="App">
+                <div className="Planet">
                     <SpinningPlanet/>
                 </div>
             </section>
