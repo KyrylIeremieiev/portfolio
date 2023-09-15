@@ -69,6 +69,11 @@
     width: 100vw;
     height: 100vh;
   }
+
+  .App{
+    width: 40%;
+    transform: translate(20%, -50%);
+  }
   
   .welcome {
     min-width: 85vw;
@@ -87,6 +92,10 @@
     left: 0;
     z-index: -1;
     object-fit: cover;
+  }
+
+  .welcome__wrapper{
+    width: 60%;
   }
   .welcome__title {
     background: linear-gradient(#A287F4, #7A57D1);
