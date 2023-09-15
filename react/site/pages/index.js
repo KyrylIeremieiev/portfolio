@@ -3,6 +3,8 @@ import { useState, useRef } from "react";
 import Link from 'next/link';
 import SpinningPlanet from './components/planet';
 import MyNavigation from './components/MyNavigation'
+import Welcome from "./components/welcome";
+import Project from "./components/project";
 
 
 export default function Home(){
@@ -21,49 +23,10 @@ export default function Home(){
     }
     return(
         <section className="site">
-            <MyNavigation>
-            </MyNavigation>
-
+            <MyNavigation></MyNavigation>
             <main>
-            <section className="welcome contentPart">
-                <article className="welcome__wrapper">
-                    <h1 className="welcome__title">Welcome to my Portfolio</h1>
-                    <p className="welcome__text">My name is Kyryl Ieremieiev,</p>
-                    <p className="welcome__text">I am an aspiring fullstack webdeveloper!</p>
-                    <button className="welcome__button">CV</button>
-                </article>
-                <div className="Planet">
-                    <SpinningPlanet/>
-                </div>
-            </section>
-            
-            <section className="projects contentPart solar">
-                <h2 className="projects__title">My Projects</h2>
-                <ul className="projects__list">
-                    <li className="projects__item">
-                        <figcaption className="projects__name">Test Project 1</figcaption>
-                    </li>
-                    <li class="projects__item">
-                        <figcaption className="projects__name">Test Project 1</figcaption>
-                    </li>
-                    <li class="projects__item">
-                        <figcaption className="projects__name">Test Project 1</figcaption>
-                    </li>
-                </ul>
-            </section>
-    
-            <section className="about contentPart lunar">
-                <article className="about__profile">
-                    <h2 className="about__title">About Me</h2>
-                    <section className="about__wrapper">
-                        <p className="about__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi cum hic quas voluptatem dicta, porro aliquid incidunt obcaecati rem expedita quam sint illum non laborum veritatis ducimus voluptatum sed dolore.
-                        Consequatur ipsa, quis accusamus est earum aliquam, vel laboriosam eos aut, esse quasi accusantium eius pariatur fugiat. Sint deserunt fugiat quisquam soluta, nisi mollitia omnis dolore sit quibusdam dicta vel!</p>
-                    </section>
-                </article>
-            </section>
-    
-            <section className="contact contentPart">
-            </section>
+                <Welcome></Welcome>
+                <Project></Project>
             </main>    
         </section>
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import MenuIcon from './menuIcon';
 
 
 const MyNavigation = () =>{
@@ -9,7 +8,6 @@ const MyNavigation = () =>{
                         <li className="header__navItem">Projects</li>
                         <li className="header__navItem">Skills</li>
                         <li className="header__navItem">About me</li>
-                        <li className="header__navItem">CV</li>
                         <li className="header__navItem">Contact</li>
                     </ul>
                 </header>
