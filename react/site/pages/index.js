@@ -38,24 +38,9 @@ export default function Home(){
             </section>
             
             <section className="projects contentPart solar">
-                <h2 className="projects__title">Projects</h2>
+                <h2 className="projects__title">My Projects</h2>
                 <ul className="projects__list">
                     <li className="projects__item">
-                        <figcaption className="projects__name">Test Project 1</figcaption>
-                    </li>
-                    <li class="projects__item">
-                        <figcaption className="projects__name">Test Project 1</figcaption>
-                    </li>
-                    <li class="projects__item">
-                        <figcaption className="projects__name">Test Project 1</figcaption>
-                    </li>
-                    <li class="projects__item">
-                        <figcaption className="projects__name">Test Project 1</figcaption>
-                    </li>
-                    <li class="projects__item">
-                        <figcaption className="projects__name">Test Project 1</figcaption>
-                    </li>
-                    <li class="projects__item">
                         <figcaption className="projects__name">Test Project 1</figcaption>
                     </li>
                     <li class="projects__item">
