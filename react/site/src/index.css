@@ -4,10 +4,6 @@
     box-sizing: border-box;
   }
   
-  .site{
-    position: relative;
-    width: 100vw;
-  }
   .backgroundcanvas{
     position: absolute;
     width:0px;
@@ -19,14 +15,16 @@
   }
   
   .site {
+    position: relative;
+    width: 100vw;
     font-size: 2rem;
+    font-family: 'Ubuntu', sans-serif;
   }
   
   body {
     min-height: 200vh;
     background: white;
     display: flex;
-    font-family: "Poppins", sans-serif;
     flex-grow: 2;
   }
 
@@ -59,10 +57,11 @@
     position: sticky !important;
     top: 0;
     left: 0;
-    background: #303841;
+    background: /* #303841 */ #212529;
     color: #D3E0EA;
     transition: 0.4s all;
     padding-top: 10rem;
+    border: 1px solid #303841;
   }
 
   .header__nav{
@@ -192,80 +191,34 @@
     color: #ADADC9;
   }
   
-  .about {
-    width: 85%;
-    flex-shrink: 1;
-    padding: 5rem;
+  .aboutMe{
+    background-color: #303841;
     color: #D3E0EA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .about__profile {
-    background: #303841;
-    border-radius: 1rem;
+    font-size: 50%;
     height: 30rem;
-    width: 85%;
-    border: 0.2rem solid #A287F4;
-    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
-  .about__title {
-    display: flex;
-    justify-self: center;
-  }
-  .about__wrapper {
-    display: flex;
-    gap: 2rem;
-  }
-  .about__img {
-    border-radius: 1rem;
-  }
-  .about__text {
-    font-size: 1rem;
-  }
-  
-  .contact {
-    width: 85vw;
-    padding: 5rem;
-    color: #D3E0EA;
-  }
-  .contact__forms {
-    background: #303841;
-    border-radius: 1rem;
-    border: 0.2rem solid #A287F4;
+
+  .aboutMe__article{
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-  }
-  .contact__form {
-    display: flex;
-    justify-content: space-between;
-  }
-  .contact__bigTitle {
-    display: flex;
     justify-content: center;
+    gap: 1rem;
+    padding-left: 4rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
-  .contact__title {
-    font-size: 2rem;
+
+  .aboutMe__title{
+    font-size: 1.5rem;
   }
-  .contact__input {
-    width: 80%;
-    resize: none;
-    padding: 0.5rem;
+
+  .aboutMe__p{
+    font-size: 1rem;
   }
-  .contact__post {
-    background: linear-gradient(to right, #A287F4, #7A57D1);
-    color: #D3E0EA;
-    transition: 0.5s all;
-    width: 10rem;
-    height: 3rem;
-    border-radius: 0.5rem;
+
+  .aboutMe__figure{
+    border: 1px solid white;
   }
-  .contact__post:hover {
-    cursor: pointer;
-    background: linear-gradient(to right, #7A57D1, #A287F4);
-  }
-  
-  /*# sourceMappingURL=style.css.map */
-  
