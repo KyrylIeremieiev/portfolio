@@ -4,6 +4,7 @@ import MyNavigation from './components/MyNavigation'
 import Welcome from "./components/welcome";
 import Project from "./components/project";
 import AboutMe from "./components/aboutMe";
+import MyExp from "./components/myExperience";
 import { Helmet } from 'react-helmet';
 
 export default function Home(){
@@ -31,6 +32,7 @@ export default function Home(){
                     <Welcome></Welcome>
                     <Project></Project>
                     <AboutMe></AboutMe>
+                    <MyExp></MyExp>
                 </main>    
             </section>
         </div>

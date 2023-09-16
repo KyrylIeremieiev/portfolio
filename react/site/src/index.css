@@ -227,3 +227,21 @@
   .aboutMe__figure{
     border: 1px solid white;
   }
+
+  .exp{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  .exp__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    width: 85vw;
+  }
+  .exp__img{
+    width: 10rem;
+  }
