@@ -225,7 +225,7 @@
   }
 
   .aboutMe__figure{
-    border: 1px solid white;
+    border-left: 1px solid white;
   }
 
   .exp{
@@ -245,3 +245,16 @@
   .exp__img{
     width: 10rem;
   }
+
+  .passion{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .passion__wrapper{
+    display: flex;
+  }
+
+  

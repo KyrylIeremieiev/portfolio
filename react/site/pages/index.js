@@ -5,6 +5,7 @@ import Welcome from "./components/welcome";
 import Project from "./components/project";
 import AboutMe from "./components/aboutMe";
 import MyExp from "./components/myExperience";
+import Passion from "./components/passion";
 import { Helmet } from 'react-helmet';
 
 export default function Home(){
@@ -33,6 +34,7 @@ export default function Home(){
                     <Project></Project>
                     <AboutMe></AboutMe>
                     <MyExp></MyExp>
+                    <Passion></Passion>
                 </main>    
             </section>
         </div>
