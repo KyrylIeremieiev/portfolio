@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Css from '../../src/images/CSS-3-01.svg'
-import Html from '../../src/images/HTML-5-logo-vector-01.svg'
-import Intellij from '../../src/images/Intellij-Idea-01.svg'
-import Mysql from '../../src/images/MySQL-01.svg'
-import Php from '../../src/images/PHP-01.svg'
-import Py from '../../src/images/Python-01.svg'
-import ReactImg from '../../src/images/React-01.svg'
-import Sass from '../../src/images/Sass-01.svg'
-import Js from '../../src/images/JS.svg'
+import Css from '../../public/images/CSS-3-01.svg'
+import Html from '../../public/images/HTML-5-logo-vector-01.svg'
+import Intellij from '../../public/images/Intellij-Idea-01.svg'
+import Mysql from '../../public/images/MySQL-01.svg'
+import Php from '../../public/images/PHP-01.svg'
+import Py from '../../public/images/Python-01.svg'
+import ReactImg from '../../public/images/React-01.svg'
+import Sass from '../../public/images/Sass-01.svg'
+import Js from '../../public/images/JS.svg'
 
 const MyExp = () =>{
     return(

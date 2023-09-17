@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import LoopbaanAnkers from '../../src/images/loopbaanAnkers.webp'
+import LoopbaanAnkers from '../../public/images/loopbaanAnkers.webp'
 
 const Project = () =>{
     return(

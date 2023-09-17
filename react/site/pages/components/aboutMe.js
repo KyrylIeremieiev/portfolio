@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const AboutMe = () =>{
     return(
@@ -16,7 +17,7 @@ const AboutMe = () =>{
                 </p>
             </article>
             <figure className='aboutMe__figure'>
-                <img></img>
+                <Image></Image>
             </figure>
         </section>
     );
