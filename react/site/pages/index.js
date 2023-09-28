@@ -1,5 +1,4 @@
 import { useEffect,useState, useRef, useCallback } from "react";
-import MyNavigation from './components/MyNavigation'
 import Welcome from "./components/welcome";
 import Project from "./components/project";
 import AboutMe from "./components/aboutMe";
@@ -10,10 +9,11 @@ import Contact from './components/contact'
 import { Helmet } from 'react-helmet';
 
 export default function Home(){
+    const welcomeRef = useRef(null);
     const projectsRef = useRef(null);
-  const aboutRef = useRef(null);
-  const skillsRef = useRef(null);
-  const contactRef = useRef(null);
+    const aboutRef = useRef(null);
+    const skillsRef = useRef(null);
+    const contactRef = useRef(null);
 
   // Function to scroll to a specific element
   const scrollToElement = (ref) => {
@@ -31,6 +31,7 @@ export default function Home(){
                 {/* <MyNavigation onClick={scrollToElementA}></MyNavigation> */}
                 <header className="header">
                     <ul className="header__nav">
+                        <li className="header__navItem" onClick={() => scrollToElement(welcomeRef)}>Home</li>
                         <li className="header__navItem" onClick={() => scrollToElement(projectsRef)}>Projects</li>
                         <li className="header__navItem" onClick={() => scrollToElement(aboutRef)}>About</li>
                         <li className="header__navItem" onClick={() => scrollToElement(skillsRef)}>Skills</li>
@@ -38,7 +39,9 @@ export default function Home(){
                     </ul>
                 </header>
                 <main>
+                    <div ref={welcomeRef}>
                     <Welcome></Welcome>
+                    </div>
                     <div ref={projectsRef}> 
                        <Project ></Project>
                     </div>

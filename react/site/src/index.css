@@ -443,6 +443,9 @@
 
 
 @media screen and (max-width:31.25rem) {
+  .header__nav{
+    font-size: 50%;
+  }
   .welcome{
     justify-content: center;
     align-items: center;
