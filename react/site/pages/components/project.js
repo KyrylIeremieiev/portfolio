@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import LoopbaanAnkers from '../../public/images/loopbaanAnkers.webp'
+import React, { useRef, forwardRef, useImperativeHandle } from 'react';
 
-const Project = () =>{
+const Project = forwardRef((props, ref) => {
+    const elementRefs = {
+        elementA1: useRef(null),
+      };
+    
+      // Expose the elementRefs to the parent component using useImperativeHandle
+      useImperativeHandle(ref, () => ({
+        elementRefs,
+      }));
     return(
-        <section className="projects contentPart">
+        <section className="projects contentPart" ref={elementRefs.elementA1}>
             <h2 className='projects__title'>My Projects</h2>
             <div className='projects__wrapper'>
                 <article className='projects__project'>
@@ -33,6 +41,7 @@ const Project = () =>{
             </div>
         </section>
     );
-}
+});
+
 
 export default Project

@@ -1,5 +1,4 @@
-import React, {useEffect} from "react";
-import { useState, useRef } from "react";
+import { useEffect,useState, useRef, useCallback } from "react";
 import MyNavigation from './components/MyNavigation'
 import Welcome from "./components/welcome";
 import Project from "./components/project";
@@ -11,34 +10,50 @@ import Contact from './components/contact'
 import { Helmet } from 'react-helmet';
 
 export default function Home(){
-    const [user, setUser] = useState('');
-    const [pass, setPass] = useState('');
-    const submit = () =>{
-        fetch('http://localhost:8080/insert', {
-        method: 'POST',
-        mode: 'cors',
-        headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({'name': user, 'expansion':pass})
-        });
+    const projectsRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // Function to scroll to a specific element
+  const scrollToElement = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
     return(
         <div>
             <Helmet>
                 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
             </Helmet>
             <section className="site" style={{ fontFamily: 'Ubuntu, sans-serif'}}>
-                <MyNavigation></MyNavigation>
+                {/* <MyNavigation onClick={scrollToElementA}></MyNavigation> */}
+                <header className="header">
+                    <ul className="header__nav">
+                        <li className="header__navItem" onClick={() => scrollToElement(projectsRef)}>Projects</li>
+                        <li className="header__navItem" onClick={() => scrollToElement(aboutRef)}>About</li>
+                        <li className="header__navItem" onClick={() => scrollToElement(skillsRef)}>Skills</li>
+                        <li className="header__navItem" onClick={() => scrollToElement(contactRef)}>Contact</li>
+                    </ul>
+                </header>
                 <main>
                     <Welcome></Welcome>
-                    <Project></Project>
-                    <AboutMe></AboutMe>
-                    <MyExp></MyExp>
+                    <div ref={projectsRef}> 
+                       <Project ></Project>
+                    </div>
+                    <div ref={aboutRef}>
+                        <AboutMe></AboutMe>
+                    </div>
+                    <div ref={skillsRef}>
+                        <MyExp ></MyExp>
+                    </div>
                     <Passion></Passion>
                     <SearchingFor></SearchingFor>
-                    <Contact></Contact>
+                    <div ref={contactRef}>
+                        <Contact></Contact>
+                    </div>
+                    
                 </main>    
             </section>
         </div>
