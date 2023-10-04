@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 const SearchingFor = () =>{
     return(
         <section className='searching'>
-            <figure className='searching__figure'>
-            </figure>
             <article className='searching__article'>
                 <h2 className='searching__title'>
                     What am I looking for?
@@ -14,6 +12,9 @@ const SearchingFor = () =>{
                     Een backend is iets waar ik interesse in heb.
                 </p>
             </article>
+            <figure className='searching__figure'>
+            </figure>
+            
         </section>
     );
 }
