@@ -13,33 +13,31 @@ const SpinningPlanet = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     containerRef.current.appendChild(renderer.domElement);
 
-    const planetGeometry = new THREE.SphereGeometry(1, 32, 32);
-
-    // Change the planet's color to #4E31AA
-    const planetMaterial = new THREE.MeshBasicMaterial({ color: 0x4E31AA });
+    // Make the big sphere 2 times bigger
+    const planetGeometry = new THREE.SphereGeometry(2, 32, 32);
+    const planetMaterial = new THREE.MeshBasicMaterial({ color: 0x5D12D2 }); // Set big sphere color to #5D12D2
     const planet = new THREE.Mesh(planetGeometry, planetMaterial);
     scene.add(planet);
 
-    const createRandomDots = () => {
-      const dotGeometry = new THREE.SphereGeometry(0.02, 16, 16);
-      const dotMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff }); // Set dot color to white
-      const dotCount = 100;
+    // Create random dots orbiting the planet
+    const dotCount = 100;
+    const dotGeometry = new THREE.SphereGeometry(0.04, 16, 16);
+    const dotMaterial = new THREE.MeshBasicMaterial({ color: 0xFFE5E5 }); // Set dot color to #FFE5E5
 
-      for (let i = 0; i < dotCount; i++) {
-        const dot = new THREE.Mesh(dotGeometry, dotMaterial);
-        const phi = Math.random() * Math.PI * 2;
-        const theta = Math.random() * Math.PI;
-        const radius = 1.1;
-        dot.position.set(
-          radius * Math.sin(theta) * Math.cos(phi),
-          radius * Math.sin(theta) * Math.sin(phi),
-          radius * Math.cos(theta)
-        );
-        planet.add(dot);
-      }
-    };
+    for (let i = 0; i < dotCount; i++) {
+      const dot = new THREE.Mesh(dotGeometry, dotMaterial);
+      const phi = Math.random() * Math.PI * 2;
+      const theta = Math.random() * Math.PI;
+      const radius = 2.2; // Smaller radius brings dots closer to the big sphere
+      dot.position.set(
+        radius * Math.sin(theta) * Math.cos(phi),
+        radius * Math.sin(theta) * Math.sin(phi),
+        radius * Math.cos(theta)
+      );
+      planet.add(dot);
+    }
 
-    createRandomDots();
+    // Rest of your code for animation...
 
     const animate = () => {
       planet.rotation.x += 0.005;
@@ -56,7 +54,7 @@ const SpinningPlanet = () => {
     };
   }, []);
 
-  return <div ref={containerRef} />;
+  return <div ref={containerRef} style={{ width: '100vw', height: '100vh' }} />;
 };
 
 export default SpinningPlanet;
