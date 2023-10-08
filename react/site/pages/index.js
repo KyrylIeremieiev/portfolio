@@ -44,6 +44,7 @@ export default function Home(){
                 <header className={`header ${scrollPosition > 60 ? 'scrolled' : ''}`}>
                     <div className="header__icon">
                       <div className="logo">Kyrylo Ieremieiev</div>
+                      <div className="dot">.</div>
                     </div>
                     <ul className={`header__nav`}>
                         <li className="header__navItem" onClick={() => scrollToElement(welcomeRef)}>Home</li>

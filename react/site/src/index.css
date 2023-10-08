@@ -76,7 +76,7 @@
   }
   
   .header__navItem {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     list-style: none;
     transition: 1s all;
 
@@ -88,8 +88,15 @@
     -webkit-text-fill-color: transparent;
   }
 
-  .logo{
-  
+  .header__icon{
+    display: flex;
+  }
+
+  .dot{
+    background: linear-gradient(to left, #5D12D2,75%,  #FFE5E5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
   }
 
   .scrolled{
@@ -448,9 +455,9 @@
     font-weight: 300;
   }
 
-  @media screen and (min-width:1450px) {
-    .projects__project{
-      flex-grow: 1;
+  @media screen and (max-width:60rem) {
+    .projects__wrapper{
+      grid-template-columns: 1fr 1fr;
     }
   }
 
@@ -478,6 +485,10 @@
       padding: 0;
       align-items: flex-start;
       height: 100%;
+    }
+
+    .projects__wrapper{
+      grid-template-columns: 1fr;
     }
 
     .aboutMe{
