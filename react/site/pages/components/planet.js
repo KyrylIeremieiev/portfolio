@@ -13,22 +13,22 @@ const SpinningPlanet = () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
     containerRef.current.appendChild(renderer.domElement);
 
-    // Make the big sphere 2 times bigger
-    const planetGeometry = new THREE.SphereGeometry(2, 32, 32);
+    // Make the big sphere 1.25 times bigger
+    const planetGeometry = new THREE.SphereGeometry(2.5, 32, 32); // Change radius to 2.5
     const planetMaterial = new THREE.MeshBasicMaterial({ color: 0x5D12D2 }); // Set big sphere color to #5D12D2
     const planet = new THREE.Mesh(planetGeometry, planetMaterial);
     scene.add(planet);
 
-    // Create random dots orbiting the planet
-    const dotCount = 100;
-    const dotGeometry = new THREE.SphereGeometry(0.04, 16, 16);
+    // Create more random dots orbiting the planet
+    const dotCount = 450; // Increase the number of dots
+    const dotGeometry = new THREE.SphereGeometry(0.03, 16, 16); // Adjusted dot size
     const dotMaterial = new THREE.MeshBasicMaterial({ color: 0xFFE5E5 }); // Set dot color to #FFE5E5
 
     for (let i = 0; i < dotCount; i++) {
       const dot = new THREE.Mesh(dotGeometry, dotMaterial);
       const phi = Math.random() * Math.PI * 2;
       const theta = Math.random() * Math.PI;
-      const radius = 2.2; // Smaller radius brings dots closer to the big sphere
+      const radius = 2.7; // Adjusted radius for closer dots
       dot.position.set(
         radius * Math.sin(theta) * Math.cos(phi),
         radius * Math.sin(theta) * Math.sin(phi),
@@ -40,8 +40,8 @@ const SpinningPlanet = () => {
     // Rest of your code for animation...
 
     const animate = () => {
-      planet.rotation.x += 0.005;
-      planet.rotation.y += 0.005;
+      planet.rotation.x += 0.002; // Slower rotation
+      planet.rotation.y += 0.002; // Slower rotation
 
       renderer.render(scene, camera);
       requestAnimationFrame(animate);

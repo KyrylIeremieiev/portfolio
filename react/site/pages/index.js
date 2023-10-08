@@ -21,6 +21,18 @@ export default function Home(){
       ref.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const currentPosition = window.scrollY;
+    setScrollPosition(currentPosition);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
     return(
         <div>
@@ -29,8 +41,11 @@ export default function Home(){
             </Helmet>
             <section className="site" style={{ fontFamily: 'Ubuntu, sans-serif'}}>
                 {/* <MyNavigation onClick={scrollToElementA}></MyNavigation> */}
-                <header className="header">
-                    <ul className="header__nav">
+                <header className={`header ${scrollPosition > 60 ? 'scrolled' : ''}`}>
+                    <div className="header__icon">
+                      <div className="logo">Kyrylo Ieremieiev</div>
+                    </div>
+                    <ul className={`header__nav`}>
                         <li className="header__navItem" onClick={() => scrollToElement(welcomeRef)}>Home</li>
                         <li className="header__navItem" onClick={() => scrollToElement(projectsRef)}>Projects</li>
                         <li className="header__navItem" onClick={() => scrollToElement(aboutRef)}>About</li>
