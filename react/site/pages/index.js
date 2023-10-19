@@ -55,8 +55,9 @@ export default function Home(){
                     </ul>
                 </header>
                 <main>
-                    <div ref={welcomeRef}>
+                    <div className="front"ref={welcomeRef}>
                     <Welcome></Welcome>
+                    <div className='box'></div>
                     </div>
                     <div ref={projectsRef}> 
                        <Project ></Project>
