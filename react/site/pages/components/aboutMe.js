@@ -4,7 +4,7 @@ import AboutImg from '../../public/images/about.jpg'
 
 const AboutMe = () =>{
     return(
-        <section className='aboutMe'>
+        <section className='aboutMe' id='about'>
             <article className='aboutMe__article'>
                 <h2 className='aboutMe__title'>
                     About me:

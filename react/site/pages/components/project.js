@@ -18,8 +18,8 @@ const Project = forwardRef((props, ref) => {
         elementRefs,
       }));
     return(
-        <section className="projects contentPart" ref={elementRefs.elementA1}>
-            <h2 className='projects__title'>Mijn Projecten</h2>
+        <section className="projects contentPart" ref={elementRefs.elementA1}id='projects'>
+            <h2 className='projects__title' >Mijn Projecten</h2>
             <div className='projects__wrapper'>
             <article className='projects__project'>
                     <div className='imgWrap'>
@@ -30,13 +30,13 @@ const Project = forwardRef((props, ref) => {
                     In dit project heb ik geleerd hoe ik nog beter api's met front end verbind
                     </p>
                     </div>
-                    <h3 className='project__title'>Git Avatar Store</h3>
+{/*                     <h3 className='project__title'>Git Avatar Store</h3>
                     <p className='project__dis'>Koop je eigen git avatar</p>
                     <p className='project__dis'>Talen gebruikt: Javascript, html, css, php (laravel)</p>
                     <p className='project__dis'>Groep: Solo project</p>
                     <p className='project__dis'>Duur: 12 dagen</p>
                     <a className='project__link' href='https://kyryl.dev/projects/git-store/index.html' target='_blank'>Naar de project toe! -{'>'}</a>
-                    <a className='project__link' href='https://github.com/KyrylIeremieiev/git-store'  target="_blank">Naar github! -{'>'}</a>
+                    <a className='project__link' href='https://github.com/KyrylIeremieiev/git-store'  target="_blank">Naar github! -{'>'}</a> */}
                 </article>
 
             <article className='projects__project'>
@@ -48,13 +48,13 @@ const Project = forwardRef((props, ref) => {
                         In dit project heb ik geleerd hoe ik content kan versprijden in menu's waar de gebruiker door kan navigeren.
                     </p>
                     </div>
-                    <h3 className='project__title'>Collection of happiness</h3>
+{/*                     <h3 className='project__title'>Collection of happiness</h3>
                     <p className='project__dis'>Bekijk de samenvattingen van 'collection of happiness'</p>
                     <p className='project__dis'>Talen gebruikt: Javascript, html, css, sass</p>
                     <p className='project__dis'>Groep: Solo project</p>
                     <p className='project__dis'>Duur: 25 dagen</p>
                     <a className='project__link' href='https://kyryl.dev/projects/podcast/index.html' target='_blank'>Naar de project toe! -{'>'}</a>
-                    <a className='project__link' href='https://github.com/KyrylIeremieiev/Module7-PROG-Eindopdracht'  target="_blank">Naar github! -{'>'}</a>
+                    <a className='project__link' href='https://github.com/KyrylIeremieiev/Module7-PROG-Eindopdracht'  target="_blank">Naar github! -{'>'}</a> */}
                 </article>
 
                 <article className='projects__project'>
@@ -67,13 +67,13 @@ const Project = forwardRef((props, ref) => {
                     </p>
 
                     </div>
-                    <h3 className='project__title'>Loopbaan ankers quizz</h3>
+{/*                     <h3 className='project__title'>Loopbaan ankers quizz</h3>
                     <p className='project__dis'>Klik op de plaatje voor meer info</p>
                     <p className='project__dis'>Talen gebruikt: Javascript, html, scss, css</p>
                     <p className='project__dis'>Groep: Ian Schaafma, Frits Bien, Kyryl Ieremieiev.</p>
                     <p className='project__dis'>Duur: 37 dagen</p>
                     <a className='project__link' href='https://kyryl.dev/projects/Web-M7/public/vlba.html' target='_blank'>Naar de project toe! -{'>'}</a>
-                    <a className='project__link' href='https://github.com/KyrylIeremieiev/Web-M7' target='_blank'>Naar github! -{'>'}</a>
+                    <a className='project__link' href='https://github.com/KyrylIeremieiev/Web-M7' target='_blank'>Naar github! -{'>'}</a> */}
                 </article>
                 <article className='projects__project'>
                     <div className='imgWrap'>
@@ -84,13 +84,13 @@ const Project = forwardRef((props, ref) => {
                         In dit project heb ik geleerd wat cookies eigenlijk zijn en hoe ik ze kan gebruiken.
                     </p>
                     </div>
-                    <h3 className='project__title'>Cookie Clicker</h3>
+{/*                     <h3 className='project__title'>Cookie Clicker</h3>
                     <p className='project__dis'>Speel cookie clicker!</p>
                     <p className='project__dis'>Talen gebruikt: Javascript, html, scss, css</p>
                     <p className='project__dis'>Groep: Solo project</p>
                     <p className='project__dis'>Duur: 8 dagen</p>
                     <a className='project__link' href='https://kyryl.dev/projects/cookie_clicker/' target='_blank'>Naar de project toe! -{'>'}</a>
-                    <a className='project__link' href='https://github.com/KyrylIeremieiev/cookie-clicker' target='_blank'>Naar github! -{'>'}</a>
+                    <a className='project__link' href='https://github.com/KyrylIeremieiev/cookie-clicker' target='_blank'>Naar github! -{'>'}</a> */}
                 </article>
 
                 <article className='projects__project'>
@@ -102,13 +102,13 @@ const Project = forwardRef((props, ref) => {
                         In dit project heb ik geleerd how ik gebruik van grid kan gebruiken.
                     </p>
                     </div>
-                    <h3 className='project__title'>Banky</h3>
+{/*                     <h3 className='project__title'>Banky</h3>
                     <p className='project__dis'>Uw eigen bank applicatie!</p>
                     <p className='project__dis'>Talen gebruikt: Javascript, html, css, sass</p>
                     <p className='project__dis'>Groep: Solo project</p>
                     <p className='project__dis'>Duur: 12 dagen</p>
                     <a className='project__link' href='https://kyryl.dev/projects/banky_version2/index.html' target='_blank'>Naar de project toe! -{'>'}</a>
-                    <a className='project__link' href='https://github.com/KyrylIeremieiev/banky--recovery'  target="_blank">Naar github! -{'>'}</a>
+                    <a className='project__link' href='https://github.com/KyrylIeremieiev/banky--recovery'  target="_blank">Naar github! -{'>'}</a> */}
                 </article>
 
                 <article className='projects__project'>
@@ -120,13 +120,13 @@ const Project = forwardRef((props, ref) => {
                         In dit project heb ik geleerd hoe ik kleuren kan genereren met js en wat voor interacties tussen de gebruiker en de website kan creeren.
                     </p>
                     </div>
-                    <h3 className='project__title'>Color Picker!</h3>
+{/*                     <h3 className='project__title'>Color Picker!</h3>
                     <p className='project__dis'>Voor als u een mooie kleur moet vinden</p>
                     <p className='project__dis'>Talen gebruikt: Javascript, html, css, sass</p>
                     <p className='project__dis'>Groep: Solo project</p>
                     <p className='project__dis'>Duur: 5 dagen</p>
                     <a className='project__link' href='https://kyryl.dev/projects/color-picker/index.html' target='_blank'>Naar de project toe! -{'>'}</a>
-                    <a className='project__link' href='https://github.com/KyrylIeremieiev/colorpicker--recover'  target="_blank">Naar github! -{'>'}</a>
+                    <a className='project__link' href='https://github.com/KyrylIeremieiev/colorpicker--recover'  target="_blank">Naar github! -{'>'}</a> */}
                 </article>
                 
             </div>

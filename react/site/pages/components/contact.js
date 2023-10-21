@@ -3,7 +3,7 @@ import contact from '../../public/images/contactPicture.png'
 
 const Passion = () =>{
     return(
-        <section className='contact'>
+        <section className='contact' id='contact'>
             <article className='contact__article'>
                 <h2 className='contact__title'>Contact Me</h2>
                 <a className='contact__contact' href="mailto:kyrylo.ieremieiev@gmail.com">kyrylo.ieremieiev@gmail.com</a>

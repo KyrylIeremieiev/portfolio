@@ -12,7 +12,7 @@ import Js from '../../public/images/JS.svg'
 
 const MyExp = () =>{
     return(
-        <section className="exp contentPart">
+        <section className="exp contentPart" id='skills'>
             <h2 className='exp__title'>My Experience</h2>
             <div className='exp__wrapper'>
                 <div className='exp__img'>

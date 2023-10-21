@@ -9,18 +9,6 @@ import Contact from './components/contact'
 import { Helmet } from 'react-helmet';
 
 export default function Home(){
-    const welcomeRef = useRef(null);
-    const projectsRef = useRef(null);
-    const aboutRef = useRef(null);
-    const skillsRef = useRef(null);
-    const contactRef = useRef(null);
-
-  // Function to scroll to a specific element
-  const scrollToElement = (ref) => {
-    if (ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
     const currentPosition = window.scrollY;
@@ -47,30 +35,31 @@ export default function Home(){
                       <div className="dot">.</div>
                     </div>
                     <ul className={`header__nav`}>
-                        <li className="header__navItem" onClick={() => scrollToElement(welcomeRef)}>Home</li>
-                        <li className="header__navItem" onClick={() => scrollToElement(projectsRef)}>Projects</li>
-                        <li className="header__navItem" onClick={() => scrollToElement(aboutRef)}>About</li>
-                        <li className="header__navItem" onClick={() => scrollToElement(skillsRef)}>Skills</li>
-                        <li className="header__navItem" onClick={() => scrollToElement(contactRef)}>Contact</li>
+                        <a className="header__navItem" href="#home">Home</a>
+                        <a className="header__navItem" href="#projects">Projects</a>
+                        <a className="header__navItem" href="#about">About</a>
+                        <a className="header__navItem" href="#skills">Skills</a>
+                        <a className="header__navItem" href="#contact">Contact</a>
                     </ul>
                 </header>
                 <main>
-                    <div className="front"ref={welcomeRef}>
+                    <div className="front">
                     <Welcome></Welcome>
                     <div className='box'></div>
+                    
                     </div>
-                    <div ref={projectsRef}> 
+                    <div> 
                        <Project ></Project>
                     </div>
-                    <div ref={aboutRef}>
+                    <div>
                         <AboutMe></AboutMe>
                     </div>
-                    <div ref={skillsRef}>
+                    <div>
                         <MyExp ></MyExp>
                     </div>
                     <Passion></Passion>
+                    <div>
                     <SearchingFor></SearchingFor>
-                    <div ref={contactRef}>
                         <Contact></Contact>
                     </div>
                     
