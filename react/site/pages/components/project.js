@@ -24,11 +24,25 @@ const Project = forwardRef((props, ref) => {
             <article className='projects__project'>
                     <div className='imgWrap'>
                     <Image className='project__image' src={gitStore}></Image>
-                    <p className='project__imageText'>In dit project heb ik een simpel webshop gemaakt waar je avatars kan kopen en aandoen. Dit website is geen echte webshop en maakt gebruik van cookies en een laravel api. Dit is een solo project.
-                    <br></br>
-                    <br></br>
-                    In dit project heb ik geleerd hoe ik nog beter api's met front end verbind
-                    </p>
+                    <figure className='project__imageText'>
+                        <article className='project__text'>
+                            <h3 className='project__title'>Koop je eigen git avatar</h3>
+                            <div className='project__disWrap'>
+                                <p className='project__dis dis'>Een simpele webshop met de thema van github.</p>
+                                <p className='project__dis'>Talen: Javascript, html, css, php (laravel)</p>
+                                <p className='project__dis'>Groep: Solo project</p>
+                                <p className='project__dis'>Duur: 12 dagen</p>
+                            </div>
+                        </article>
+                        <ul className='project__links'>
+                            <li>
+                                <a className='project__link' href='https://kyryl.dev/projects/git-store/index.html' target='_blank'>Naar de project toe! -{'>'}</a>
+                            </li>
+                            <li>
+                                <a className='project__link' href='https://github.com/KyrylIeremieiev/git-store'  target="_blank">Naar github! -{'>'}</a> 
+                            </li>
+                        </ul>
+                    </figure>
                     </div>
 {/*                     <h3 className='project__title'>Git Avatar Store</h3>
                     <p className='project__dis'>Koop je eigen git avatar</p>
@@ -93,7 +107,7 @@ const Project = forwardRef((props, ref) => {
                     <a className='project__link' href='https://github.com/KyrylIeremieiev/cookie-clicker' target='_blank'>Naar github! -{'>'}</a> */}
                 </article>
 
-                <article className='projects__project'>
+                {/* <article className='projects__project'>
                     <div className='imgWrap'>
                     <Image className='project__image' src={Banky}></Image>
                     <p className='project__imageText'>In dit project heb ik een kleine front end applicatie gebouwd met het thema 'bank applicatie'. U kunt hier van rekening naar rekening verwisselen en zelfs uw tegoed en transacties blurren. Dit is een solo project.
@@ -108,7 +122,7 @@ const Project = forwardRef((props, ref) => {
                     <p className='project__dis'>Groep: Solo project</p>
                     <p className='project__dis'>Duur: 12 dagen</p>
                     <a className='project__link' href='https://kyryl.dev/projects/banky_version2/index.html' target='_blank'>Naar de project toe! -{'>'}</a>
-                    <a className='project__link' href='https://github.com/KyrylIeremieiev/banky--recovery'  target="_blank">Naar github! -{'>'}</a> */}
+                    <a className='project__link' href='https://github.com/KyrylIeremieiev/banky--recovery'  target="_blank">Naar github! -{'>'}</a> 
                 </article>
 
                 <article className='projects__project'>
@@ -120,14 +134,14 @@ const Project = forwardRef((props, ref) => {
                         In dit project heb ik geleerd hoe ik kleuren kan genereren met js en wat voor interacties tussen de gebruiker en de website kan creeren.
                     </p>
                     </div>
-{/*                     <h3 className='project__title'>Color Picker!</h3>
+                     <h3 className='project__title'>Color Picker!</h3>
                     <p className='project__dis'>Voor als u een mooie kleur moet vinden</p>
                     <p className='project__dis'>Talen gebruikt: Javascript, html, css, sass</p>
                     <p className='project__dis'>Groep: Solo project</p>
                     <p className='project__dis'>Duur: 5 dagen</p>
                     <a className='project__link' href='https://kyryl.dev/projects/color-picker/index.html' target='_blank'>Naar de project toe! -{'>'}</a>
-                    <a className='project__link' href='https://github.com/KyrylIeremieiev/colorpicker--recover'  target="_blank">Naar github! -{'>'}</a> */}
-                </article>
+                    <a className='project__link' href='https://github.com/KyrylIeremieiev/colorpicker--recover'  target="_blank">Naar github! -{'>'}</a> 
+                </article> */}
                 
             </div>
         </section>
