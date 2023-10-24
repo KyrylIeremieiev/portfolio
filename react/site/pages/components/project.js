@@ -56,11 +56,26 @@ const Project = forwardRef((props, ref) => {
             <article className='projects__project'>
                     <div className='imgWrap'>
                     <Image className='project__image' src={Podcast}></Image>
-                    <p className='project__imageText'>Dit is de eindopdracht voor 2de jaar studenten in module 7. De bedoeling is om van aflevering naar aflevering te kunnen wisselen en de herhaling nog een keer te bekijken. Dit is een solo project.
-                        <br></br>
-                        <br></br>
-                        In dit project heb ik geleerd hoe ik content kan versprijden in menu's waar de gebruiker door kan navigeren.
-                    </p>
+                       <figure className='project__imageText'>
+                        <article className='project__text'>
+                            <h3 className='project__title'>Collection of Happiness</h3>
+                            <div className='project__disWrap'>
+                            <p className='project__dis'>Bekijk de samenvattingen van 'collection of happiness'</p>
+                            <p className='project__dis'>Talen gebruikt: Javascript, html, css, sass</p>
+                            <p className='project__dis'>Groep: Solo project</p>
+                            <p className='project__dis'>Duur: 25 dagen</p>
+                            </div>
+                        </article>
+                        <ul className='project__links'>
+                            <li>
+                            <a className='project__link' href='https://kyryl.dev/projects/podcast/index.html' target='_blank'>Naar de project toe! -{'>'}</a>
+                            </li>
+                            <li>
+                            <a className='project__link' href='https://github.com/KyrylIeremieiev/Module7-PROG-Eindopdracht'  target="_blank">Naar github! -{'>'}</a>
+                            </li>
+                        </ul>
+                    </figure>
+                
                     </div>
 {/*                     <h3 className='project__title'>Collection of happiness</h3>
                     <p className='project__dis'>Bekijk de samenvattingen van 'collection of happiness'</p>
@@ -74,11 +89,26 @@ const Project = forwardRef((props, ref) => {
                 <article className='projects__project'>
                     <div className='imgWrap borderProject'>
                     <Image className='project__image' src={LoopbaanAnkers}></Image>
-                    <p className='project__imageText'>Vind uit wat jouw loopbaan ankers zijn! Dit formulier is gemaakt met de bijdrage van Frits Bien, Ian Schaafma en mijzelf. De design en Styling voor dit formulier is gemaakt door Ian Schaafma en de logica door mijzelf. Dit is een puur front-end project gemaakt voor Doesburg Coaching.
-                        <br></br>
-                        <br></br>
-                        In dit project heb ik geleerd hoe ik beter met logica en heel veel code moet omgaan.
-                    </p>
+                    <figure className='project__imageText'>
+                        <article className='project__text'>
+                            <h3 className='project__title'>DoesBurg Coaching</h3>
+                            <div className='project__disWrap'>
+                                <p className='project__dis'>Klik op de plaatje voor meer info</p>
+                                <p className='project__dis'>Talen gebruikt: Javascript, html, scss, css</p>
+                                <p className='project__dis'>Groep: Ian Schaafma, Frits Bien, Kyryl Ieremieiev.</p>
+                                <p className='project__dis'>Duur: 37 dagen</p>
+                            </div>
+                        </article>
+                        <ul className='project__links'>
+                            <li>
+                            <a className='project__link' href='https://kyryl.dev/projects/Web-M7/public/vlba.html' target='_blank'>Naar de project toe! -{'>'}</a>
+                            </li>
+                            <li>
+                            <a className='project__link' href='https://github.com/KyrylIeremieiev/Web-M7' target='_blank'>Naar github! -{'>'}</a>
+                            </li>
+                        </ul>
+                    </figure>
+                    
 
                     </div>
 {/*                     <h3 className='project__title'>Loopbaan ankers quizz</h3>
@@ -92,11 +122,25 @@ const Project = forwardRef((props, ref) => {
                 <article className='projects__project'>
                     <div className='imgWrap'>
                     <Image className='project__image' src={Cookie}></Image>
-                    <p className='project__imageText'>Cookie klikker is een web applicatie standaard voor de tweede jaars MA studenten. In dit project heb ik een functioneel cookie klikker gemaakt dat door middel van cookies score kan opslaan. Dit is een solo project. Ik heb hiervan geleerd hoe ik cookies moet gebruiken.
-                    <br></br>
-                        <br></br>
-                        In dit project heb ik geleerd wat cookies eigenlijk zijn en hoe ik ze kan gebruiken.
-                    </p>
+                    <figure className='project__imageText'>
+                        <article className='project__text'>
+                            <h3 className='project__title'>Cookie Clicker</h3>
+                            <div className='project__disWrap'>
+                                <p className='project__dis'>Speel cookie clicker!</p>
+                                <p className='project__dis'>Talen gebruikt: Javascript, html, scss, css</p>
+                                <p className='project__dis'>Groep: Solo project</p>
+                                <p className='project__dis'>Duur: 8 dagen</p>
+                            </div>
+                        </article>
+                        <ul className='project__links'>
+                            <li>
+                                <a className='project__link' href='https://kyryl.dev/projects/cookie_clicker/' target='_blank'>Naar de project toe! -{'>'}</a>
+                            </li>
+                            <li>
+                                <a className='project__link' href='https://github.com/KyrylIeremieiev/cookie-clicker' target='_blank'>Naar github! -{'>'}</a>
+                            </li>
+                        </ul>
+                    </figure>
                     </div>
 {/*                     <h3 className='project__title'>Cookie Clicker</h3>
                     <p className='project__dis'>Speel cookie clicker!</p>
