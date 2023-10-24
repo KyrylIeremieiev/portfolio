@@ -386,12 +386,13 @@
   }
   
   .aboutMe{
-    background-color: #303841;
+    background-color: #18122B;
     color: #D3E0EA;
     height: 40rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     overflow: hidden;
+
   }
 
   .aboutMe__article{
@@ -408,6 +409,7 @@
 
   .aboutMe__title{
     font-size: 2rem;
+    color: #A287F4;
   }
 
   .aboutMe__p{
@@ -415,7 +417,6 @@
   }
 
   .aboutMe__figure{
-    border-left: 1px solid white;
     position: relative;
     width: 100%;
     height: 100%;
@@ -427,7 +428,7 @@
   }
 
   .aboutMe__img{
-    background-image: url('../public/images/about.jpeg');
+    background-image: url('../public/images/about.jpg');
       background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -542,7 +543,7 @@
   }
 
   .searching{
-    background-color: #303841;
+    background-color: #18122B;
     color: #D3E0EA;
     font-size: 50%;
     height: 30rem;
@@ -562,15 +563,17 @@
   }
 
   .searching__title{
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: #A287F4;
+    font-weight: 400;
   }
 
   .searching__p{
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   .searching__figure{
-    background-image: url('../public/images/officePhoto.webp');
+    background-image: url('../public/images/officePhoto.jpg');
     background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
