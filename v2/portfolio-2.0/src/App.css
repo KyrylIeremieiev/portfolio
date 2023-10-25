@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+#root{
+  height: 100vh;
+}
+
+html{
+  background: #C08261;
+}
+
+.body{
+  background: #C08261;
+  padding: 2rem;
+  height: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+}
+.App {
+  color: #D3E0EA;
+  border-radius: 3rem;
+  border: 0.1rem solid #E2C799;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+.left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.Donut{
+  transform: scale(1.5);
+}
+.welcome__title{
+  background: linear-gradient(to right, #900C3F,20%,  #C23373);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
