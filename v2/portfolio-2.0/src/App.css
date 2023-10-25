@@ -5,80 +5,103 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Sometype Mono', monospace;
 }
 #root{
   height: 100vh;
 }
 
 html{
-  background: #C08261;
+  background: black;
 }
 
+li{
+  list-style: none;
+}
+
+
 .body{
-  background: #C08261;
+  background: black;
   padding: 2rem;
   height: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  background-color: black;
+  background-image:
+    radial-gradient(#D3E0EA, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(#D3E0EA, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(#D3E0EA, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  animation: moveStars 60s linear infinite;
 
 }
 .App {
-  color: #D3E0EA;
-  border-radius: 3rem;
-  border: 0.1rem solid #E2C799;
+  background: black;
+  border-radius: 1rem;
+  border: 0.1rem solid #D3E0EA;
   height: 100%;
   width: 100%;
-  padding: 2rem;
+  padding: 4rem;
+  padding-top: 6rem;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 40% 60%;
+  background-color: #0e0e0e;
+  opacity: 0.9;
+  background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #0e0e0e 25%);
+  background-position:  10px 0, 10px 0, 0 0, 0 0;
+  background-size: 10px 10px;
+  background-repeat: repeat;
+}
+
+@keyframes moveStars {
+  0% {
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  }
+  50% {
+    background-position: 550px 550px, 390px 610px, 280px 320px, 220px 450px;
+  }
+  100%{
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  }
 }
 .left{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 1rem;
 }
-.Donut{
-  transform: scale(1.5);
+
+.nav{
+  width: 100%;
+  height: 100%;
+
 }
+
+.nav__navItem{
+  width: 100%;
+}
+.nav__navButton{
+  background: none;
+  border: none;
+  color: #D3E0EA;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  font-family: 'Sometype Mono', monospace;
+}
+
+.nav__navButton:hover{
+  color:#5D12D2;
+  cursor: pointer;
+}
+
 .welcome__title{
-  background: linear-gradient(to right, #900C3F,20%,  #C23373);
+  background: linear-gradient(to right, #5D12D2,50%,  #FFE5E5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    font-size: 2.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
