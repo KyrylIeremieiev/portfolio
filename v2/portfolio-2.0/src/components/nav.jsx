@@ -1,7 +1,7 @@
-const Nav = ({ updateParentState }) => {
+const Nav = ({ updateProject }) => {
 
     const goToProjects = () =>{
-        console.log("clicked")
+        updateProject(false);
     }
     return(
         <ul className='nav'>
