@@ -26,73 +26,87 @@ li{
 
 .body{
   background: black;
-  padding: 2rem;
+  padding: 4rem;
+  padding-right: 2rem;
   height: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
   background-color: black;
-  background-image:
-    radial-gradient(#D3E0EA, rgba(255,255,255,.2) 2px, transparent 40px),
-    radial-gradient(#D3E0EA, rgba(255,255,255,.15) 1px, transparent 30px),
-    radial-gradient(#D3E0EA, rgba(255,255,255,.1) 2px, transparent 40px),
-    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-  animation: moveStars 60s linear infinite;
-
+  display: flex;
+  align-items: flex-end;
 }
 .App {
   background: black;
-  border-radius: 1rem;
-  border: 0.1rem solid #D3E0EA;
+  border: 0.05rem solid #D3E0EA;
   height: 100%;
   width: 100%;
-  padding: 4rem;
-  padding-top: 6rem;
   overflow: hidden;
-  background-color: #0e0e0e;
-  opacity: 0.9;
-  background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #0e0e0e 25%);
-  background-position:  10px 0, 10px 0, 0 0, 0 0;
-  background-size: 10px 10px;
-  background-repeat: repeat;
+  background-color: #000000;
+opacity: 1;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000000 14px ), repeating-linear-gradient( #1f1f1f55, #1f1f1f );
   animation: entrance 1s;
+  z-index: 1;
+  position: relative;
+  
 }
+
+.darkLight{
+  transform: rotate(-90deg) translateX(-150%);
+  display: flex;
+  gap: 1rem;
+  width: 0.2rem !important;
+  padding-bottom: 1.5rem;
+  z-index: 0;
+  
+}
+
+.darkLight__btn{
+  color: #D3E0EA;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  transition: color 0.5s;
+  padding: 0;
+
+}
+
+.darkLight__btn:hover{
+  color: #D21312;
+}
+
+
+.navigation{
+  padding: 4rem;
+  padding-top: 4rem;
+  animation: bounce 1s;
+}
+
 
 @keyframes entrance {
   from{
-    background-color: #0e0e0e;
-opacity: 0.9;
-background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #0e0e0e 25%);
-background-position:  14px 0, 14px 0, 0 0, 0 0;
-background-size: 14px 14px;
-background-repeat: repeat;
+    opacity: 0;
   }
   to{
-    background-color: #0e0e0e;
-  opacity: 0.9;
-  background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #0e0e0e 25%);
-  background-position:  10px 0, 10px 0, 0 0, 0 0;
-  background-size: 10px 10px;
-  background-repeat: repeat;
+    opacity: 1;
   }
 }
 
-@keyframes moveStars {
-  0% {
-    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+@keyframes bounce {
+  from{
+    transform: translateY(5%);
+    opacity: 0;
   }
-  50% {
-    background-position: 550px 550px, 390px 610px, 280px 320px, 220px 450px;
-  }
-  100%{
-    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+  to{
+    transform: translateY(0);
+    opacity: 1;
   }
 }
+
+
 .navigation{
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   align-items: flex-start;
 }
 
@@ -115,7 +129,7 @@ background-repeat: repeat;
 }
 
 .nav__navButton:hover{
-  color:#5D12D2;
+  color:#D21312;
   cursor: pointer;
 }
 
@@ -129,40 +143,117 @@ background-repeat: repeat;
 }
 
 .title{
-  background: linear-gradient(to right, #5D12D2,50%,  #FFE5E5);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
     font-size: 3rem;
+    font-weight: 400;
+    color: #D3E0EA;
 }
 
 .section{
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 30% 70%;
 }
 
 .nav__navButton:hover .project{
   display: flex;
 }
 
+.projectOpen{
+  background-color: #1a1a1a;
+opacity: 0.8;
+background: linear-gradient(135deg, #00000055 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(225deg, #000000 25%, transparent 25%) -10px 0/ 20px 20px, linear-gradient(315deg, #00000055 25%, transparent 25%) 0px 0/ 20px 20px, linear-gradient(45deg, #000000 25%, #1a1a1a 25%) 0px 0/ 20px 20px;}
+
 .project{
-  padding-top: 4rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.test{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .project__img{
   width: 100%;
-  border-radius: 2rem;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  filter: brightness(50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  opacity: 1;
 }
 
+.project__caption{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background: #000000;
+  bottom: 0;
+  left: 0;
+  opacity: 0.8;
+  color: #D3E0EA;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.static{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: repeating-radial-gradient(circle at 17% 32%, white, black 0.00085px);
+  animation: tv-static 0.75s;
+  z-index: -1;
+  opacity: 0;
+}
+
+
+@keyframes tv-static {
+  0% {
+    opacity: 1;
+    background-size: 100% 100%;
+    z-index: 2;
+  }
+
+  90% {
+    opacity: 1;
+    background-size: 200% 200%;
+    z-index: 2;
+  }
+
+  100%{
+    background-size: 200% 200%;
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.details{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
 .project__links{
   display: flex;
-  justify-content: space-evenly;
+  gap: 1rem;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
 }
 .project__link{
-  color: #D3E0EA;
-  font-size: 3rem;
+  opacity: 0.8;
+  color: #000000;
+  font-size: 2.25rem;
   transition: color 0.3s ease;
 }
 

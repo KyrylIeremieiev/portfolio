@@ -3,6 +3,7 @@ import './App.css';
 import { Helmet } from 'react-helmet';
 import Nav from './components/nav';
 import Projects from './components/projects';
+import DarkLight from './components/darkLight';
 import { useState } from 'react';
 function App() {
   const [projectOpen, setProject] = useState(true);
@@ -28,14 +29,17 @@ function App() {
         <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;500;600&family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/1a0fbdd901.js" crossorigin="anonymous"></script>
       </Helmet>
-      <div className="App">
+      <DarkLight></DarkLight>
+      <div className={'App'}>
       {homeOpen ? (
         <p className='useless'></p> // Show loading message while data is being fetched
       ) : (
-        <section className='start navigation'>
-          <h1 className='welcome__title title'>Kyrylo Ieremieiev</h1> 
-          <Nav updateProject={updateProject}></Nav>
-        </section>
+          <section className='start navigation'>
+            <div className='navWrap'>
+              <h1 className='welcome__title title'>Kyrylo Ieremieiev</h1> 
+              <Nav updateProject={updateProject}></Nav>
+            </div>            
+          </section>
       )}
 
 
