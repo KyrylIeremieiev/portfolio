@@ -54,6 +54,26 @@ li{
   background-position:  10px 0, 10px 0, 0 0, 0 0;
   background-size: 10px 10px;
   background-repeat: repeat;
+  animation: entrance 1s;
+}
+
+@keyframes entrance {
+  from{
+    background-color: #0e0e0e;
+opacity: 0.9;
+background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #0e0e0e 25%);
+background-position:  14px 0, 14px 0, 0 0, 0 0;
+background-size: 14px 14px;
+background-repeat: repeat;
+  }
+  to{
+    background-color: #0e0e0e;
+  opacity: 0.9;
+  background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #0e0e0e 25%);
+  background-position:  10px 0, 10px 0, 0 0, 0 0;
+  background-size: 10px 10px;
+  background-repeat: repeat;
+  }
 }
 
 @keyframes moveStars {
@@ -67,7 +87,7 @@ li{
     background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
   }
 }
-.left{
+.navigation{
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -96,12 +116,25 @@ li{
   cursor: pointer;
 }
 
-.welcome__title{
+.nav__navButton:hover .App{
+  background-color: #0e0e0e;
+opacity: 0.9;
+background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #0e0e0e 25%);
+background-position:  14px 0, 14px 0, 0 0, 0 0;
+background-size: 14px 14px;
+background-repeat: repeat;
+}
+
+.title{
   background: linear-gradient(to right, #5D12D2,50%,  #FFE5E5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    font-size: 2.5rem;
+    font-size: 3rem;
+}
+
+.projects{
+  display: none;
 }
 
 
