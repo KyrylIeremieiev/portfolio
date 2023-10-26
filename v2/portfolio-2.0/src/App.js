@@ -7,9 +7,18 @@ import { useState } from 'react';
 function App() {
   const [projectOpen, setProject] = useState(true);
   const [homeOpen, setHome] = useState(false)
+  const updateHome = (value) =>{
+    reset();
+    setHome(value);
+  }
   const updateProject = (value) =>{
+    reset()
     setProject(value);
-    setHome(true)
+  }
+
+  const reset = () =>{
+    setHome(true);
+    setProject(true);
   }
   return (
     <div className='body'>
@@ -17,6 +26,7 @@ function App() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;500;600&family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/1a0fbdd901.js" crossorigin="anonymous"></script>
       </Helmet>
       <div className="App">
       {homeOpen ? (
@@ -32,9 +42,7 @@ function App() {
       {projectOpen ? (
         <p className='useless'></p> // Show loading message while data is being fetched
       ) : (
-        <section className='projects navigation'>
-          <Projects></Projects>
-        </section>
+          <Projects updateHome={updateHome}></Projects>
       )}
 
       </div>
