@@ -64,14 +64,15 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000
   color: #D3E0EA;
   border: none;
   background: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: color 0.5s;
   padding: 0;
 
 }
 
 .darkLight__btn:hover{
-  color: #D21312;
+  color: #7D7C7C;
+  cursor: pointer;
 }
 
 
@@ -129,7 +130,7 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000
 }
 
 .nav__navButton:hover{
-  color:#D21312;
+  color:#7D7C7C;
   cursor: pointer;
 }
 
@@ -152,7 +153,7 @@ background-repeat: repeat;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 40% 60%;
 }
 
 .nav__navButton:hover .project{
@@ -171,38 +172,33 @@ background: linear-gradient(135deg, #00000055 25%, transparent 25%) -10px 0/ 20p
 }
 
 .test{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+  padding-top: 8rem;
   overflow: hidden;
   position: relative;
 }
+
 
 .project__img{
   width: 100%;
   height: 100%;
   position: relative;
   z-index: 1;
-  filter: brightness(50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  filter: brightness(70%);
   object-fit: cover;
   opacity: 1;
+  border-top-left-radius: 2rem;
+  animation: entrance 0.5s;
 }
 
-.project__caption{
-  position: absolute;
-  width: 100%;
-  height: 30%;
-  background: #000000;
-  bottom: 0;
-  left: 0;
-  opacity: 0.8;
+.project__title{
+  z-index: 2;
   color: #D3E0EA;
-  padding: 1rem;
-  font-size: 1.5rem;
 }
+
+
 
 .static{
   position: absolute;

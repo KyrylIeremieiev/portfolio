@@ -31,6 +31,7 @@ function App() {
       </Helmet>
       <DarkLight></DarkLight>
       <div className={'App'}>
+      <div className="static"></div>
       {homeOpen ? (
         <p className='useless'></p> // Show loading message while data is being fetched
       ) : (

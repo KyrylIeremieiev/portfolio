@@ -1,19 +1,53 @@
 import { useState } from "react";
-import doesburg from '../images/doesburgTumb.webp'
-import CoH from '../images/podcast.png'
-
+/* import doesburg from '../images/doesburgTumb.webp'
+import CoH from '../images/podcast.png' */
+import doesburg from '../images/bjj.jpg'
+import CoH from '../images/coding.jpg'
+import Project from './project';
 const Projects = ({ updateHome }) =>{
+    const projectData = [
+        {
+        "Img":doesburg,
+        "title":"DoesBurg Coaching",
+        "Text":"",
+        "Len":[
+            'js',
+            'html',
+            'css',
+            'scss'
+        ],
+        "Git":'https://github.com/KyrylIeremieiev/Web-M7',
+        "Site":'https://kyryl.dev/projects/Web-M7/public/vlba.html'
+        },
+
+        {
+        "Img":CoH,
+        "title":"Collection of Happiness",
+        "Text":"",
+        "Len":[
+            'js',
+            'html',
+            'css',
+            'scss'
+        ],
+        "Git":'https://github.com/KyrylIeremieiev/Web-M7',
+        "Site":'https://kyryl.dev/projects/Web-M7/public/vlba.html'
+        }
+    ]
+
     let prefix1 = '';
     let prefix2 = '';
     const [project1Open, setProject1] = useState(true)
     const [project2Open, setProject2] = useState(true)
+    const [goToProject1, setProjectPage1] = useState(true)
+    const [goToProject2, setProjectPage2] = useState(true)
     if(project1Open == false){
-        prefix1 = '>';
+        prefix1 = <i class="fa-solid fa-arrow-right"></i>;
     }else{
         prefix1 = ''
     }
     if(project2Open == false){
-        prefix2 = '>'
+        prefix2 = <i class="fa-solid fa-arrow-right"></i>
     }else{
         prefix2 = ''
     }
@@ -50,12 +84,12 @@ const Projects = ({ updateHome }) =>{
                         </button>
                     </li>
                     <li>
-                        <button className='nav__navButton nav__project' onClick={()=>{open('1')}}>
+                        <button className='nav__navButton nav__project' onMouseEnter={()=>{open('1')}} onMouseLeave={reset}>
                             {prefix1} Doesburg
                         </button>
                     </li>
                     <li>
-                        <button className='nav__navButton nav__project' onClick={()=>{open('2')}}>
+                        <button className='nav__navButton nav__project' onMouseEnter={()=>{open('2')}} onMouseLeave={reset}>
                             {prefix2} CoH
                         </button>
                     </li>
@@ -66,7 +100,7 @@ const Projects = ({ updateHome }) =>{
                 <p className='useless'></p>
             ) : (
                 
-                <figure className="test">
+                <section className="test">
                     {/* <figure className="project">
                     <div className="project__img">
                         <img className="project__img" src={doesburg}></img>
@@ -86,9 +120,10 @@ const Projects = ({ updateHome }) =>{
                         <div className="static"></div>
                     </div>
                 </figure> */}
+
+
                     <img className="project__img" src={doesburg}></img>
-                    <div className="static"></div>
-                </figure>
+                </section>
             )}
 
             {project2Open ? (
@@ -116,7 +151,6 @@ const Projects = ({ updateHome }) =>{
                     </div>
                 </figure> */}
                     <img className="project__img" src={CoH}></img>
-                    <div className="static"></div>
                 </figure>
             )}
         </section>
