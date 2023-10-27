@@ -40,8 +40,7 @@ const Projects = ({ updateHome }) =>{
     const [project1Open, setProject1] = useState(true)
     const [project2Open, setProject2] = useState(true)
     const [goToProject, setProjectPage] = useState(false)
-    const [goToProject1, setProjectPage1] = useState(true)
-    const [goToProject2, setProjectPage2] = useState(true)
+    const [currentProject, setCurrent] = useState(true)
     if(project1Open == false){
         prefix1 = <i class="fa-solid fa-arrow-right"></i>;
     }else{
@@ -80,7 +79,7 @@ const Projects = ({ updateHome }) =>{
     return(
         <div className="section__wrapper">
             {goToProject ? (
-                <Project Img={projectData[0].Img} goToHome={goToHome} Title={projectData[0].Title} Disc={projectData[0].Text}></Project>
+                <Project Img={projectData[currentProject].Img} goToHome={goToHome} Title={projectData[currentProject].Title} Disc={projectData[currentProject].Text} ></Project>
             ) : (
             <section className="section">
                 <article className="projects navigation">
@@ -93,12 +92,22 @@ const Projects = ({ updateHome }) =>{
                             </button>
                         </li>
                         <li>
-                            <button className='nav__navButton nav__project' onMouseEnter={()=>{open('1')}} onMouseLeave={reset}>
+                            <button className='nav__navButton nav__project' onMouseEnter={()=>{
+                                open('1');
+                                setCurrent(0);
+                                }} 
+                                onMouseLeave={reset}
+                                onClick={OpenProject}>
                                 {prefix1} Doesburg
                             </button>
                         </li>
                         <li>
-                            <button className='nav__navButton nav__project' onMouseEnter={()=>{open('2')}} onMouseLeave={reset} onClick={OpenProject}>
+                            <button className='nav__navButton nav__project' onMouseEnter={()=>{
+                                open('2')
+                                setCurrent(1);
+                            }} 
+                                onMouseLeave={reset} 
+                                onClick={OpenProject}>
                                 {prefix2} CoH
                             </button>
                         </li>
