@@ -8,7 +8,7 @@ const Projects = ({ updateHome }) =>{
     const projectData = [
         {
         "Img":doesburg,
-        "title":"DoesBurg Coaching",
+        "Title":"DoesBurg Coaching",
         "Text":"",
         "Len":[
             'js',
@@ -22,7 +22,7 @@ const Projects = ({ updateHome }) =>{
 
         {
         "Img":CoH,
-        "title":"Collection of Happiness",
+        "Title":"Collection of Happiness",
         "Text":"",
         "Len":[
             'js',
@@ -39,6 +39,7 @@ const Projects = ({ updateHome }) =>{
     let prefix2 = '';
     const [project1Open, setProject1] = useState(true)
     const [project2Open, setProject2] = useState(true)
+    const [goToProject, setProjectPage] = useState(false)
     const [goToProject1, setProjectPage1] = useState(true)
     const [goToProject2, setProjectPage2] = useState(true)
     if(project1Open == false){
@@ -68,92 +69,52 @@ const Projects = ({ updateHome }) =>{
         }
     }
 
+    const OpenProject= () =>{
+        setProjectPage(true)
+    }
+
     const reset = () =>{
         setProject1(true);
         setProject2(true);
     }
     return(
-        <section className="section">
-            <article className="projects navigation">
-                <div className='navWrap'>
-                <h2 className="projects__title title">Projects</h2>
-                <ul>
-                    <li>
-                        <button className='nav__navButton' onClick={goToHome}>
-                            Home
-                        </button>
-                    </li>
-                    <li>
-                        <button className='nav__navButton nav__project' onMouseEnter={()=>{open('1')}} onMouseLeave={reset}>
-                            {prefix1} Doesburg
-                        </button>
-                    </li>
-                    <li>
-                        <button className='nav__navButton nav__project' onMouseEnter={()=>{open('2')}} onMouseLeave={reset}>
-                            {prefix2} CoH
-                        </button>
-                    </li>
-                </ul>
-                </div>
-            </article>
-            {project1Open ? (
-                <p className='useless'></p>
+        <div className="section__wrapper">
+            {goToProject ? (
+                <Project Img={projectData[0].Img} goToHome={goToHome} Title={projectData[0].Title} Disc={projectData[0].Text}></Project>
             ) : (
-                
-                <section className="test">
-                    {/* <figure className="project">
-                    <div className="project__img">
-                        <img className="project__img" src={doesburg}></img>
-                        <figcaption className="project__caption">
-                            <h3 className="project__title">Doesburg Coaching Loopbaanankers Form</h3>
-                            <p className="project__len">Talen: <i class="fa-brands fa-square-js"></i> <i class="fa-brands fa-css3-alt"></i> <i class="fa-brands fa-sass"></i> <i class="fa-brands fa-html5"></i>
-                            </p>
-                        </figcaption>
-                        <ul className="project__links">
-                            <li className="project__link">
-                                <a href='https://github.com/KyrylIeremieiev/Web-M7' target='_blank'><i class="fa-brands fa-github project__link"></i></a>
-                            </li>
-                            <li className="project__link">
-                                <a  href='https://kyryl.dev/projects/Web-M7/public/vlba.html' target='_blank'><i class="fa-solid fa-magnifying-glass project__link"></i></a>
-                            </li>
-                        </ul>
-                        <div className="static"></div>
+            <section className="section">
+                <article className="projects navigation">
+                    <div className='navWrap'>
+                    <h2 className="projects__title title">Projects</h2>
+                    <ul>
+                        <li>
+                            <button className='nav__navButton' onClick={goToHome}>
+                                Home
+                            </button>
+                        </li>
+                        <li>
+                            <button className='nav__navButton nav__project' onMouseEnter={()=>{open('1')}} onMouseLeave={reset}>
+                                {prefix1} Doesburg
+                            </button>
+                        </li>
+                        <li>
+                            <button className='nav__navButton nav__project' onMouseEnter={()=>{open('2')}} onMouseLeave={reset} onClick={OpenProject}>
+                                {prefix2} CoH
+                            </button>
+                        </li>
+                    </ul>
                     </div>
-                </figure> */}
-
-
+                    
+                </article>
+                <figure className={`test ${project1Open ? "":"rendered"}`}>
                     <img className="project__img" src={doesburg}></img>
-                </section>
-            )}
-
-            {project2Open ? (
-                <p className='useless'></p>
-            ) : (
-                
-                <figure className="test">
-                    {/* <figure className="project">
-                    <div className="project__img">
-                        <img className="project__img" src={doesburg}></img>
-                        <figcaption className="project__caption">
-                            <h3 className="project__title">Doesburg Coaching Loopbaanankers Form</h3>
-                            <p className="project__len">Talen: <i class="fa-brands fa-square-js"></i> <i class="fa-brands fa-css3-alt"></i> <i class="fa-brands fa-sass"></i> <i class="fa-brands fa-html5"></i>
-                            </p>
-                        </figcaption>
-                        <ul className="project__links">
-                            <li className="project__link">
-                                <a href='https://github.com/KyrylIeremieiev/Web-M7' target='_blank'><i class="fa-brands fa-github project__link"></i></a>
-                            </li>
-                            <li className="project__link">
-                                <a  href='https://kyryl.dev/projects/Web-M7/public/vlba.html' target='_blank'><i class="fa-solid fa-magnifying-glass project__link"></i></a>
-                            </li>
-                        </ul>
-                        <div className="static"></div>
-                    </div>
-                </figure> */}
+                </figure>
+                <figure className={`test ${project2Open ? "":"rendered"}`}>
                     <img className="project__img" src={CoH}></img>
                 </figure>
-            )}
-        </section>
+            </section>
+        )}
+        </div>
     )
 }
 export default Projects;
