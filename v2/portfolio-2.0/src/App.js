@@ -10,6 +10,7 @@ import AboutImg from './images/about.jpg'
 import ContactImg from './images/contact.jpg'
 import { useState } from 'react';
 import Skills from './components/skills';
+import PageTemp from './components/page';
 function App() {
   const data= [
     {
@@ -25,6 +26,22 @@ function App() {
       "Img":ContactImg
     }
   ]
+
+  const PageData = [
+    {
+      "Page":"Skills",
+      "heading":[
+        "Front-End",
+        "Back-End"
+      ],
+      "p":[
+        "Billy did a bad thing",
+        "Mitchel played lol"
+      ],
+      "img":SkillsImg
+    }
+  ]
+
   const [projectOpen, setProject] = useState(true);
   const [skillsOpen, setSkills] = useState(true);
   const [homeOpen, setHome] = useState(false)
@@ -83,7 +100,8 @@ function App() {
       {skillsOpen ? (
         <p className='useless'></p> // Show loading message while data is being fetched
       ) : (
-          <Skills updateHome={updateHome}></Skills>
+          
+          <PageTemp heading={PageData[0].heading} p={PageData[0].p} img={PageData[0].img} page={PageData[0].Page} updateHome={updateHome}>{/* <Skills updateHome={updateHome}></Skills> */}</PageTemp>
       )}
 
       

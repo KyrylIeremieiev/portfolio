@@ -105,7 +105,11 @@ const Projects = ({ updateHome }) =>{
                                 setCurrent(0);
                                 }} 
                                 onMouseLeave={reset}
-                                onClick={OpenProject}>
+                                onClick={()=>{
+                                    setCurrent(0); //needed for mobile
+                                    OpenProject()
+
+                                }}>
                                 {prefix1} Doesburg
                             </button>
                         </li>
@@ -115,7 +119,10 @@ const Projects = ({ updateHome }) =>{
                                 setCurrent(1);
                             }} 
                                 onMouseLeave={reset} 
-                                onClick={OpenProject}>
+                                onClick={()=>{
+                                    setCurrent(1);
+                                    OpenProject()
+                                }}>
                                 {prefix2} CoH
                             </button>
                         </li>
