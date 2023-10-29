@@ -59,14 +59,11 @@ const PageTemp = (props) =>{
                     </div>
                     </nav>
                     {props.heading.map((heading, index) => (
-  <figure key={index} className={`test ${disc === index ? 'rendered' : ''}`}>
-    <h3 className="project__disc project__title">{heading}</h3>
-    <p className="project__disc">{props.p[index]}</p>
-  </figure>
-))}
-
-
-
+                    <figure key={index} className={`test ${disc === index ? 'rendered' : ''}`}>
+                        <h3 className="project__disc project__title">{heading}</h3>
+                        <div className="project__disc" dangerouslySetInnerHTML={{ __html: props.p[index] }}></div>
+                    </figure>
+                    ))}
             </section>
     )
 }

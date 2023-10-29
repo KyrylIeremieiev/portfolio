@@ -38,7 +38,7 @@ function App() {
         "Back-End"
       ],
       "p":[
-        "Billy did a bad thing",
+        '<p className="project__disc">icecream</p>',
         "Mitchel played lol"
       ],
       "img":SkillsImg
