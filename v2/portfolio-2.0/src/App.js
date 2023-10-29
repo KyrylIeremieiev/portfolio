@@ -29,6 +29,9 @@ function App() {
 
   const PageData = [
     {
+
+    },
+    {
       "Page":"Skills",
       "heading":[
         "Front-End",
@@ -47,6 +50,7 @@ function App() {
   const [homeOpen, setHome] = useState(false)
   const [menuOpen, setMenu] = useState(true)
   const [currentMenu, setCurrent] = useState(null)
+  const [finalMenu, setFinal] = useState(null)
   const updateHome = (value) =>{
     reset();
     setHome(value);
@@ -85,7 +89,7 @@ function App() {
           <section className='start navigation'>
             <div className='navWrap'>
               <h1 className='welcome__title title'>Kyrylo Ieremieiev</h1> 
-              <Nav updateProject={updateProject} setMenu={setMenu} reset={reset} setCurrent={setCurrent} updateSkills={updateSkills}></Nav>
+              <Nav updateProject={updateProject} setMenu={setMenu} reset={reset} setCurrent={setCurrent} updateSkills={updateSkills} setFinal={setFinal}></Nav>
             </div>            
           </section>
       )}
@@ -101,7 +105,7 @@ function App() {
         <p className='useless'></p> // Show loading message while data is being fetched
       ) : (
           
-          <PageTemp heading={PageData[0].heading} p={PageData[0].p} img={PageData[0].img} page={PageData[0].Page} updateHome={updateHome}>{/* <Skills updateHome={updateHome}></Skills> */}</PageTemp>
+          <PageTemp heading={PageData[finalMenu].heading} p={PageData[finalMenu].p} img={PageData[finalMenu].img} page={PageData[finalMenu].Page} updateHome={updateHome}>{/* <Skills updateHome={updateHome}></Skills> */}</PageTemp>
       )}
 
       

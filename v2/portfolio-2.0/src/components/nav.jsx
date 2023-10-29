@@ -9,7 +9,11 @@ const Nav = (props) => {
     return(
         <ul className='nav'>
             <li className='nav__navItem'>
-              <button className='nav__navButton' onClick={goToProjects}
+              <button className='nav__navButton' onClick={()=>{
+                props.setFinal(0)
+                goToProjects()
+              
+              }}
                onMouseEnter={()=>{
                 props.setMenu(true)
                 props.setMenu(false); 
@@ -22,7 +26,11 @@ const Nav = (props) => {
               </button>
             </li>
             <li className='nav__navItem'>
-              <button className='nav__navButton' onClick={goToSkills}
+              <button className='nav__navButton' onClick={()=>{
+                props.setFinal(1)
+                goToSkills()
+              
+              }}
               onMouseEnter={()=>{
                 props.setMenu(false); 
                 props.setCurrent(1) 
