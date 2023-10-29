@@ -6,6 +6,7 @@
 
 a{
   list-style: none;
+  color: #D3E0EA;
 }
 
 body {
@@ -51,13 +52,27 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000
 }
 
 .darkLight{
-  transform: rotate(-90deg) translateX(-150%);
   display: flex;
   gap: 1rem;
-  width: 0.2rem !important;
-  padding-bottom: 1.5rem;
   z-index: 0;
-  
+  height: 100% !important;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.socials{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.themes{
+  width: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap:3rem;
 }
 
 .darkLight__btn{
@@ -67,7 +82,11 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000
   font-size: 1.2rem;
   transition: color 0.5s;
   padding: 0;
+  width: 100%;
+}
 
+.rotate{
+  transform: rotate(-90deg)
 }
 
 .darkLight__btn:hover{
@@ -114,11 +133,14 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #000
 .nav{
   width: 100%;
   height: 100%;
-
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .nav__navItem{
   width: 100%;
+  
 }
 .nav__navButton{
   background: none;
@@ -171,6 +193,7 @@ background-repeat: repeat;
   filter: brightness(20%);
   animation: entrance 1s;
   z-index: -1;
+  object-fit: cover;
 }
 
 .nav__navButton:hover .project{
@@ -190,24 +213,24 @@ background: linear-gradient(135deg, #00000055 25%, transparent 25%) -10px 0/ 20p
 
 .test{
   width: 100%;
-  height: 100%;
   padding-left: 0;
-  padding-top: 8rem;
   overflow: hidden;
   position: relative;
   display: none;
   align-items: flex-end;
+  flex-direction: column;
+  background: #000000;
+  padding: 2rem;
+  padding-top: 5rem;
+  gap: 1rem;
 }
 
 .project__disc{
   background: #000000;
   width: 100%;
-  height: 100%;
-  border-top-left-radius: 2rem;
   animation: entrance 1s;
-  padding: 2rem;
   color: #D3E0EA;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 .rendered{
@@ -230,9 +253,12 @@ background: linear-gradient(135deg, #00000055 25%, transparent 25%) -10px 0/ 20p
 .project__title{
   z-index: 2;
   color: #D3E0EA;
+  font-size: 2rem;
 }
 
-
+.link{
+  font-size: 2rem;
+}
 
 .static{
   position: absolute;
@@ -241,7 +267,7 @@ background: linear-gradient(135deg, #00000055 25%, transparent 25%) -10px 0/ 20p
   width: 100%;
   height: 100%;
   background-image: repeating-radial-gradient(circle at 17% 32%, white, black 0.00085px);
-  animation: tv-static 0.75s;
+  animation: tv-static 1.5s;
   z-index: -1;
   opacity: 0;
 }

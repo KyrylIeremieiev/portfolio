@@ -30,7 +30,9 @@ const Project = (props) =>{
                     <h2 className="projects__title title">Projects</h2>
                     <ul>
                         <li>
-                            <button className='nav__navButton' onClick={props.goToHome}>
+                            <button className='nav__navButton' onClick={()=>{
+                                props.closeProject(false)
+                            }}>
                                 Back
                             </button>
                         </li>
@@ -39,13 +41,19 @@ const Project = (props) =>{
                                 {prefix1} Discription
                             </button>
                         </li>
+                        <li>
+                            <a className="nav__navButton link" href={props.Git} target="_blank"><i class="fa-brands fa-github"></i></a> <a className="nav__navButton link" href={props.Site} target="_blank"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </li>
                     </ul>
                     </div>
                     
                 </article>
                 <figure className={`test ${discOpen ? "":"rendered"}`}>
-                    <p className="project__disc">
+                    <h3 className="project__disc project__title" >
                         {props.Title}
+                    </h3>
+                    <p className="project__disc">
+                        {props.Disc}
                     </p>
                 </figure>
                 </section>
