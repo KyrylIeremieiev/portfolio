@@ -9,7 +9,6 @@ import SkillsImg from './images/skills.jpg';
 import AboutImg from './images/about.jpg'
 import ContactImg from './images/contact.jpg'
 import { useState } from 'react';
-import Skills from './components/skills';
 import PageTemp from './components/page';
 function App() {
   const data= [
@@ -31,6 +30,7 @@ function App() {
     {
 
     },
+
     {
       "Page":"Skills",
       "heading":[
@@ -42,13 +42,42 @@ function App() {
         "Mitchel played lol"
       ],
       "img":SkillsImg
-    }
+    },
+
+    {
+      "Page":"About",
+      "heading":[
+        "Hobbies",
+        "Persona"
+      ],
+      "p":[
+        "Billy did a bad thing",
+        "Mitchel played lol"
+      ],
+      "img":AboutImg
+    },
+
+    {
+      "Page":"About",
+      "heading":[
+        "Phone",
+        "Email",
+        "Linkedin"
+      ],
+      "p":[
+        "Billy did a bad thing",
+        "Mitchel played lol",
+        "Nothing can change"
+      ],
+      "img":ContactImg
+    },
   ]
 
   const [projectOpen, setProject] = useState(true);
   const [skillsOpen, setSkills] = useState(true);
   const [homeOpen, setHome] = useState(false)
-  const [menuOpen, setMenu] = useState(true)
+  const [menuPreview, setPreview] = useState(true)
+  const [menuOpen, setMenu] = useState(true);
   const [currentMenu, setCurrent] = useState(null)
   const [finalMenu, setFinal] = useState(null)
   const updateHome = (value) =>{
@@ -59,17 +88,14 @@ function App() {
     reset()
     setProject(value);
   }
-  const updateSkills = (value) =>{
-    reset()
-    setSkills(value);
-  }
 
   const reset = () =>{
     setHome(true);
     setProject(true);
-    setMenu(true);
+    setPreview(true);
     setSkills(true);
     setCurrent(null);
+    setMenu(true)
   }
   return (
     <div className='body'>
@@ -81,7 +107,7 @@ function App() {
       </Helmet>
       <DarkLight></DarkLight>
       <div className={'App'}>
-      <img src={menuOpen ? "":data[currentMenu].Img} className={`section__background ${menuOpen ? "useless":"rendered"}`}/>
+      <img src={menuPreview ? "":data[currentMenu].Img} className={`section__background ${menuPreview ? "useless":"rendered"}`}/>
       <div className="static"></div>
       {homeOpen ? (
         <p className='useless'></p> // Show loading message while data is being fetched
@@ -89,7 +115,7 @@ function App() {
           <section className='start navigation'>
             <div className='navWrap'>
               <h1 className='welcome__title title'>Kyrylo Ieremieiev</h1> 
-              <Nav updateProject={updateProject} setMenu={setMenu} reset={reset} setCurrent={setCurrent} updateSkills={updateSkills} setFinal={setFinal}></Nav>
+              <Nav updateProject={updateProject} setPreview={setPreview} reset={reset} setCurrent={setCurrent} setFinal={setFinal} setMenu={setMenu}></Nav>
             </div>            
           </section>
       )}
@@ -101,7 +127,7 @@ function App() {
           <Projects updateHome={updateHome}></Projects>
       )}
 
-      {skillsOpen ? (
+      {menuOpen ? (
         <p className='useless'></p> // Show loading message while data is being fetched
       ) : (
           
