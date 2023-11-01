@@ -10,6 +10,16 @@ import AboutImg from './images/about.jpg'
 import ContactImg from './images/contact.jpg'
 import { useState } from 'react';
 import PageTemp from './components/page';
+
+import Css from './images/CSS-3-01.svg'
+import Html from './images/HTML-5-logo-vector-01.svg'
+import Intellij from './images/Intellij-Idea-01.svg'
+import Mysql from './images/MySQL-01.svg'
+import Php from './images/PHP-01.svg'
+import Py from './images/Python-01.svg'
+import ReactImg from './images/React-01.svg'
+import Sass from './images/Sass-01.svg'
+import Js from './images/JS.svg'
 function App() {
   const data= [
     {
@@ -26,6 +36,9 @@ function App() {
     }
   ]
 
+  const FrontEnd = [Css, Html, ReactImg, Sass, Js];
+  const BackEnd = [Mysql, Php, Py];
+
   const PageData = [
     {
 
@@ -38,38 +51,75 @@ function App() {
         "Back-End"
       ],
       "p":[
-        '<p className="project__disc">icecream</p>',
-        "Mitchel played lol"
+        `<ul class="imgList">
+          <li class="skills__img">
+            <img src="${Html}"></img>
+          </li>
+          <li class="skills__img">
+            <img src="${Css}"></img>
+          </li>
+          <li class="skills__img">
+            <img src="${Sass}"></img>
+          </li>
+          <li class="skills__img">
+            <img src="${ReactImg}"></img>
+          </li>
+          <li class="skills__img">
+            <img src="${Js}"></img>
+          </li>
+        <ul>`,
+
+        `<ul class="imgList">
+          <li class="skills__img">
+            <img src="${Mysql}"></img>
+          </li>
+          <li class="skills__img">
+            <img src="${Php}"></img>
+          </li>
+          <li class="skills__img">
+            <img src="${Py}"></img>
+          </li>
+        <ul>`
       ],
-      "img":SkillsImg
+      "img":SkillsImg,
+      "links":false
     },
 
     {
       "Page":"About",
       "heading":[
-        "Hobbies",
-        "Persona"
+        "About Me",
+        "Hobbies"
       ],
       "p":[
-        "Billy did a bad thing",
-        "Mitchel played lol"
+        "<p class='about'>Hallo, mijn naam is Kyryl Ieremieiev. Ik ben 18 jaar oud en ik woon in Hoofddorp. Ik ben in 2022 begonnen aan code toen ik bij Media College Amsterdam Software development begon te studeren. Sindsdien is code schrijven een passie van mij geworden. Ik ben een grote fan van het leren van nieuwe dingen en hoop in de toekomst aan grote projecten mee te doen.</p>",
+        "<div className='passion__wrapper'><article className='passion__card coding'><h3 className='passion__cardTitle'>Coding/Programming</h3><p className='passion__dis'>Ik hou van code schrijven, je leert elke dag iets nieuws!</p></article><article className='passion__card bjj'><h3 className='passion__titleTitle'>Brazilian Jiu-Jutsu</h3><p className='passion__dis'>Voor een fullcontactsport is het extreem veilig. Bovendien leer je elke les die je bijwoont iets nieuws!</p></article><article className='passion__card poe'><h3 className='passion__titleTitle'>RPG's</h3><p className='passion__dis'>Wanneer ik wat vrije tijd heb, speel ik games. Vooral rpg's</p></article></div>"
       ],
-      "img":AboutImg
+      "img":AboutImg,
+      "links":false
     },
 
     {
-      "Page":"About",
+      "Page":"Contact",
       "heading":[
-        "Phone",
-        "Email",
+        "kyrylo.ieremieiev@gmail.com",
+        "0616604351",
+        "GitHub",
         "Linkedin"
       ],
       "p":[
-        "Billy did a bad thing",
-        "Mitchel played lol",
-        "Nothing can change"
+        "Click send me an email me",
+        "Click to copy",
+        "Click to go to GitHub",
+        "Click to go to linkedin"
       ],
-      "img":ContactImg
+      "img":ContactImg,
+      "links":[
+        "mailto:kyrylo.ieremieiev@gmail.com",
+        "dial:0616604351",
+        "https://github.com/KyrylIeremieiev",
+        "https://www.linkedin.com/in/kyrylo-ieremieiev-7b0986291/"
+      ]
     },
   ]
 
@@ -131,7 +181,7 @@ function App() {
         <p className='useless'></p> // Show loading message while data is being fetched
       ) : (
           
-          <PageTemp heading={PageData[finalMenu].heading} p={PageData[finalMenu].p} img={PageData[finalMenu].img} page={PageData[finalMenu].Page} updateHome={updateHome}>{/* <Skills updateHome={updateHome}></Skills> */}</PageTemp>
+          <PageTemp PageData={PageData[finalMenu]} updateHome={updateHome}></PageTemp>
       )}
 
       

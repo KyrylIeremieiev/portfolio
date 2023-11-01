@@ -1,14 +1,9 @@
 import { useState } from "react";
 
 const Project = (props) =>{
-    let prefix1 = '';
-    let prefix2 = '';
+
     const [discOpen, setDisc] = useState(true)
-    if(discOpen == false){
-        prefix1 = <i class="fa-solid fa-arrow-right"></i>;
-    }else{
-        prefix1 = ''
-    }
+
     const open=(value)=>{
         switch (value){
             case '1':
@@ -38,7 +33,7 @@ const Project = (props) =>{
                         </li>
                         <li>
                             <button className='nav__navButton nav__project' onMouseEnter={()=>{open('1')}} onMouseLeave={resetProject}>
-                                {prefix1} Discription
+                                Discription
                             </button>
                         </li>
                         <li>

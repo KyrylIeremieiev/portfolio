@@ -41,18 +41,6 @@ const Projects = ({ updateHome }) =>{
     const [projectOpen, setProject] = useState(true)
     const [goToProject, setProjectPage] = useState(false)
     const [currentProject, setCurrent] = useState(true)
-    let prefix1 = '';
-    let prefix2 = '';
-    if(project1Open == false){
-        prefix1 = <i class="fa-solid fa-arrow-right"></i>;
-    }else{
-        prefix1 = ''
-    }
-    if(project2Open == false){
-        prefix2 = <i class="fa-solid fa-arrow-right"></i>
-    }else{
-        prefix2 = ''
-    }
     const goToHome = () =>{
         updateHome(false);
     }
@@ -110,7 +98,7 @@ const Projects = ({ updateHome }) =>{
                                     OpenProject()
 
                                 }}>
-                                {prefix1} Doesburg
+                                Doesburg
                             </button>
                         </li>
                         <li>
@@ -123,7 +111,7 @@ const Projects = ({ updateHome }) =>{
                                     setCurrent(1);
                                     OpenProject()
                                 }}>
-                                {prefix2} CoH
+                                CoH
                             </button>
                         </li>
                     </ul>
