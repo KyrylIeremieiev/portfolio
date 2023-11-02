@@ -123,6 +123,7 @@ function App() {
     },
   ]
 
+  const [mode, setMode] = useState('light');
   const [projectOpen, setProject] = useState(true);
   const [skillsOpen, setSkills] = useState(true);
   const [homeOpen, setHome] = useState(false)
@@ -147,16 +148,17 @@ function App() {
     setCurrent(null);
     setMenu(true)
   }
+  console.log(mode);
   return (
-    <div className='body'>
+    <div className={`body ${mode === "light" ? 'light' : ''}`}>
       <Helmet>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;500;600&family=Ubuntu:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet"/>
         <script src="https://kit.fontawesome.com/1a0fbdd901.js" crossorigin="anonymous"></script>
       </Helmet>
-      <DarkLight></DarkLight>
-      <div className={'App'}>
+      <DarkLight setMode={setMode} mode={mode}></DarkLight>
+      <div className={`App ${mode === "light" ? 'lightBorder lightPattern' : ''}`}>
       <img src={menuPreview ? "":data[currentMenu].Img} className={`section__background ${menuPreview ? "useless":"rendered"}`}/>
       <div className="static"></div>
       {homeOpen ? (
