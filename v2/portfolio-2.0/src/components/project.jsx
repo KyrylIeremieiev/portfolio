@@ -22,7 +22,7 @@ const Project = (props) =>{
                     </img>
                     <article className="projects navigation">
                     <div className='navWrap'>
-                    <h2 className="projects__title title">Projects</h2>
+                    <h2 className="projects__title title">{props.Title}</h2>
                     <ul>
                         <li>
                             <button className='nav__navButton' onClick={()=>{

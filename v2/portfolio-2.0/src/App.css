@@ -356,7 +356,8 @@ img{
 .lightPattern{
   background-color: #989898;
   opacity: 1;
-  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #989898 10px ), repeating-linear-gradient( #00000055, #000000 );}
+  background-image: radial-gradient(#000000 0.5px, #989898 0.5px);
+  background-size: 10px 10px;}
 @media screen and (max-width:62.5rem) {
   .navigation{
     padding: 2rem;

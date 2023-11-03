@@ -3,6 +3,7 @@ import { useState } from "react";
 import CoH from '../images/podcast.png' */
 import doesburg from '../images/doesburgTumb.webp'
 import CoH from '../images/podcast.png'
+import Cookie from '../images/cookieClicker.jpeg'
 import Project from './project';
 import ProjectImg from '../images/officePhoto.jpg'
 const Projects = ({ updateHome }) =>{
@@ -33,11 +34,24 @@ const Projects = ({ updateHome }) =>{
         ],
         "Git":'https://github.com/KyrylIeremieiev/Module7-PROG-Eindopdracht',
         "Site":'https://kyryl.dev/projects/podcast/index.html'
-        }
+        },
+        {
+            "Img":Cookie,
+            "Title":"Cookie Clicker",
+            "Text":"Bekijk de samenvattingen van 'collection of happiness. Eindopdracht Prog M7, solo project",
+            "Len":[
+                'js',
+                'html',
+                'css',
+                'scss'
+            ],
+            "Git":'https://github.com/KyrylIeremieiev/Module7-PROG-Eindopdracht',
+            "Site":'https://kyryl.dev/projects/podcast/index.html'
+            }
+
+
     ]
 
-    const [project1Open, setProject1] = useState(true)
-    const [project2Open, setProject2] = useState(true)
     const [projectOpen, setProject] = useState(true)
     const [goToProject, setProjectPage] = useState(false)
     const [currentProject, setCurrent] = useState(true)
@@ -48,15 +62,7 @@ const Projects = ({ updateHome }) =>{
     const open = (project) =>{
         reset()
         setProject(false)
-        switch(project){
-            case "1":
-                setProject1(false);
-                break;
-            case "2":
-                setProject2(false);
-                break;
-            
-        }
+       
     }
 
     const OpenProject= () =>{
@@ -65,20 +71,19 @@ const Projects = ({ updateHome }) =>{
 
     const reset = () =>{
         setProject(true)
-        setProject1(true);
-        setProject2(true);
         setCurrent(null);
     }
     return(
         <div className="section__wrapper">
+            <img src={ProjectImg} className={`section__background base ${projectOpen ? "rendered":"useless"}`}></img>
+                <img src={projectOpen ? "":projectData[currentProject].Img} className={`section__background ${projectOpen ? "useless":"rendered"}`}>
+                    </img>
             {goToProject ? (
                 <Project Img={projectData[currentProject].Img} closeProject={setProjectPage} Title={projectData[currentProject].Title} Disc={projectData[currentProject].Text} Git={projectData[currentProject].Git} Site={projectData[currentProject].Site}></Project>
             ) : (
             <section className="section">
                 <article className="projects navigation">
-                <img src={ProjectImg} className={`section__background base ${projectOpen ? "rendered":"useless"}`}></img>
-                <img src={projectOpen ? "":projectData[currentProject].Img} className={`section__background ${projectOpen ? "useless":"rendered"}`}>
-                    </img>
+                
                     <nav className='navWrap'>
                     <h2 className="projects__title title">Projects</h2>
                     <ul className="nav">
@@ -87,21 +92,24 @@ const Projects = ({ updateHome }) =>{
                                 Home
                             </button>
                         </li>
-                        <li>
-                            <button className='nav__navButton nav__project' onMouseEnter={()=>{
-                                open('1');
-                                setCurrent(0);
-                                }} 
-                                onMouseLeave={reset}
-                                onClick={()=>{
-                                    setCurrent(0); //needed for mobile
-                                    OpenProject()
+                        {projectData.map((heading, index) => (
+                     <li>
+                     <button className='nav__navButton nav__project' onMouseEnter={()=>{
+                         open(index);
+                         setCurrent(index);
+                         }} 
+                         onMouseLeave={reset}
+                         onClick={()=>{
+                             setCurrent(index); //needed for mobile
+                             OpenProject()
 
-                                }}>
-                                Doesburg
-                            </button>
-                        </li>
-                        <li>
+                         }}>
+                         {heading.Title}
+                     </button>
+                 </li>
+                    ))}
+                       
+                        {/* <li>
                             <button className='nav__navButton nav__project' onMouseEnter={()=>{
                                 open('2')
                                 setCurrent(1);
@@ -113,7 +121,7 @@ const Projects = ({ updateHome }) =>{
                                 }}>
                                 CoH
                             </button>
-                        </li>
+                        </li> */}
                     </ul>
                     </nav>
                     

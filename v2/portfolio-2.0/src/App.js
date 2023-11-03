@@ -109,21 +109,21 @@ function App() {
       ],
       "p":[
         "Click send me an email me",
-        "Click to copy",
+        "Click to dial",
         "Click to go to GitHub",
         "Click to go to linkedin"
       ],
       "img":ContactImg,
       "links":[
         "mailto:kyrylo.ieremieiev@gmail.com",
-        "dial:0616604351",
+        "dialto:0616604351",
         "https://github.com/KyrylIeremieiev",
         "https://www.linkedin.com/in/kyrylo-ieremieiev-7b0986291/"
       ]
     },
   ]
 
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState('dark');
   const [projectOpen, setProject] = useState(true);
   const [skillsOpen, setSkills] = useState(true);
   const [homeOpen, setHome] = useState(false)
