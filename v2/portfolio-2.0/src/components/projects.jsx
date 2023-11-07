@@ -2,12 +2,28 @@ import { useState } from "react";
 /* import doesburg from '../images/doesburgTumb.webp'
 import CoH from '../images/podcast.png' */
 import doesburg from '../images/doesburgTumb.webp'
-import CoH from '../images/podcast.png'
-import Cookie from '../images/cookieClicker.jpeg'
+import CoH from '../images/podcast.webp'
+import Cookie from '../images/cookieClicker.webp'
+import GitStore from '../images/gitStore.webp'
+import Portfolio from '../images/portV1.webp'
 import Project from './project';
-import ProjectImg from '../images/officePhoto.jpg'
+import ProjectImg from '../images/officePhoto.webp'
 const Projects = ({ updateHome }) =>{
     const projectData = [
+        {
+            "Img":GitStore,
+            "Title":"Git Store",
+            "Text":"Een simpele webshop met de thema van github. Solo project. Gemaakt in 8 dagen",
+            "Len":[
+                'js',
+                'html',
+                'css',
+                'php',
+                'mysql'
+            ],
+            "Git":'https://github.com/KyrylIeremieiev/git-store',
+            "Site":'https://kyryl.dev/projects/git-store/index.html'
+        },
         {
         "Img":doesburg,
         "Title":"DoesBurg Coaching",
@@ -38,16 +54,30 @@ const Projects = ({ updateHome }) =>{
         {
             "Img":Cookie,
             "Title":"Cookie Clicker",
-            "Text":"Bekijk de samenvattingen van 'collection of happiness. Eindopdracht Prog M7, solo project",
+            "Text":"Speel Cookie Clicker! Simpel project met een save systeem dat gebruik maakt van cookies.",
             "Len":[
                 'js',
                 'html',
                 'css',
                 'scss'
             ],
-            "Git":'https://github.com/KyrylIeremieiev/Module7-PROG-Eindopdracht',
-            "Site":'https://kyryl.dev/projects/podcast/index.html'
-            }
+            "Git":'https://github.com/KyrylIeremieiev/cookie-clicker',
+            "Site":'https://kyryl.dev/projects/cookie_clicker/'
+        },
+        {
+            "Img":Portfolio,
+            "Title":"Portfolio V1",
+            "Text":"Old version of my portfolio. Its nothing alike the one I use now so i thought i'd put it here. Solo project. ",
+            "Len":[
+                'js',
+                'html',
+                'css',
+                'react'
+            ],
+            "Git":'https://github.com/KyrylIeremieiev/portfolio/tree/main/react',
+            "Site":'https://kyryl.dev/v1.html'
+        },
+        
 
 
     ]
@@ -79,7 +109,7 @@ const Projects = ({ updateHome }) =>{
                 <img src={projectOpen ? "":projectData[currentProject].Img} className={`section__background ${projectOpen ? "useless":"rendered"}`}>
                     </img>
             {goToProject ? (
-                <Project Img={projectData[currentProject].Img} closeProject={setProjectPage} Title={projectData[currentProject].Title} Disc={projectData[currentProject].Text} Git={projectData[currentProject].Git} Site={projectData[currentProject].Site}></Project>
+                <Project Img={projectData[currentProject].Img} closeProject={setProjectPage} Title={projectData[currentProject].Title} Disc={projectData[currentProject].Text} Len={projectData[currentProject].Len} Git={projectData[currentProject].Git} Site={projectData[currentProject].Site}></Project>
             ) : (
             <section className="section">
                 <article className="projects navigation">

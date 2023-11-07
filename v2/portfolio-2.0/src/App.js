@@ -4,16 +4,15 @@ import { Helmet } from 'react-helmet';
 import Nav from './components/nav';
 import Projects from './components/projects';
 import DarkLight from './components/darkLight';
-import ProjectImg from './images/officePhoto.jpg';
-import SkillsImg from './images/skills.jpg';
-import AboutImg from './images/about.jpg'
-import ContactImg from './images/contact.jpg'
+import ProjectImg from './images/officePhoto.webp';
+import SkillsImg from './images/codingStockImg.webp';
+import AboutImg from './images/about.webp'
+import ContactImg from './images/contact.webp'
 import { useState } from 'react';
 import PageTemp from './components/page';
 
 import Css from './images/CSS-3-01.svg'
 import Html from './images/HTML-5-logo-vector-01.svg'
-import Intellij from './images/Intellij-Idea-01.svg'
 import Mysql from './images/MySQL-01.svg'
 import Php from './images/PHP-01.svg'
 import Py from './images/Python-01.svg'

@@ -218,6 +218,12 @@ background: linear-gradient(135deg, #00000055 25%, transparent 25%) -10px 0/ 20p
   justify-content: flex-end;
 }
 
+.project__lenWrapper{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
 .test{
   width: 100%;
   padding-left: 0;
